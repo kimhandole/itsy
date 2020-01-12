@@ -9,19 +9,22 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 36px;
+  padding: 0px 36px;
   font-size: 40px;
+  height: 80px;
 }
 
 header h1 {
-    color:#f16520;
-    font-size: 36px;
+    color:#f1641E !important;
+    font-size: 41px;
+    font-family: 'Gelasio', serif;
 }
 
 .login-signup {
-    font-size: 14px;
+    font-size: 13px;
     color: #222222;
     font-weight: 500;
+    line-height: 1.4;
     padding: 9px 15px;
     border-bottom-left-radius: 24px;
     border-bottom-right-radius: 24px;
@@ -39,9 +42,10 @@ header h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 14px;
+    font-size: 13px;
     color: #222222;
-    font-weight: 400;
+    font-weight: 300;
+    line-height: 18px;
 }
 
 /* shop */

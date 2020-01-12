@@ -1,0 +1,190 @@
+.homepage {
+    font-family: "Guardian-EgypTT",serif;
+}
+
+#homepage-header {
+    color: rgb(34, 34, 34);
+    font-size: 32px;
+    font-weight: 300;
+    padding: 30px 12px 12px 12px;
+    text-align: center;
+    text-size-adjust: 100%;
+    font-family: "Guardian-EgypTT", serif;
+    letter-spacing: 0.5px;
+}
+
+.homepage-content {
+    height: 320px;
+    color: #000000;
+    display: flex;
+    padding: 18px 36px 0px 36px;
+}
+
+#left-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    border: 1px solid #E1E3DF;
+    border-radius: 4px;
+    background-color: #f8ebe6;
+    width: 64%;
+    margin-right: 18px;
+}
+
+#left-banner {
+    padding: 18px;
+    flex: 46%;
+}
+
+#left-banner-text1 {
+    font-size: 28px;
+    line-height: 1.2;
+    margin-bottom: 12px;
+    text-align: center;
+    font-family: "Guardian-EgypTT", serif;
+}
+
+#left-banner-text2 {
+    text-align: center;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+} 
+
+#left-content-img {
+    height: 320px;
+    width: 100%;
+}
+
+#content-day-icon svg {
+    width: 10%;
+    height: 10%;
+}
+
+.itsy-icon-smaller {
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    fill: currentColor;
+    vertical-align: middle;
+}
+
+#all-products {
+    padding: 0px 36px;
+}
+
+#all-products h2 {
+    font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+    font-size: 26px;
+    text-align: center;
+}
+
+#banner-text-container {
+    display: flex;
+    justify-content: center;
+    color: #222;
+}
+
+.banner-text {
+    margin: 30px 0px 0px;
+    padding: 12px 36px;
+    font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+    font-size: 26px;
+    text-align: center;
+    width: 33.33%
+}
+
+.banner-icon {
+    display: inline-block;
+    fill: rgb(229, 84, 0);
+    height: 24px;
+    vertical-align: middle;
+    width: 24px;
+}
+
+.banner-title {
+    font-size: 16px;
+    margin-bottom: 0px;
+}
+
+.banner-title-text {
+    padding: 0px 0px 0px 12px;
+}
+
+.banner-description {
+    font-size: 14px;
+}
+
+.all-products {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#banner-text-container {
+    margin-bottom: 36px;
+}
+
+#right-content {
+    width: 36%;
+    height: 100%;
+    color: #000000;
+    font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+}
+
+#right-content-top {
+    border: 1px solid #E1E3DF;
+    border-radius: 4px;
+    position: relative;
+    height: 68%;
+    margin-bottom: 18px;
+}
+
+#right-content-top-text {
+    padding: 18px;
+    position: absolute;
+}
+
+#right-content-top p:first-child {
+    font-size: 20px;
+    padding-bottom: 12px;
+}
+
+#shop-engagement {
+    font-size: 14px;
+}
+
+.right-banner-picture {
+    width: 100%;
+}
+
+.right-banner-picture img {
+    width: 100%;
+    height: 100%;
+}
+
+#right-content-bottom {
+    width: 100%;
+    height: 26%;
+    border: 1px solid #E1E3DF;
+    border-radius: 4px;
+    background-color: #f8ebe6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#ships-free {
+    font-size: 14px;
+    color: #222;
+    font-weight: 500;
+    line-height: 1.6;
+    letter-spacing: normal;
+    font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+}

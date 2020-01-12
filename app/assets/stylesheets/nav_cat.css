@@ -2,8 +2,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 12px 36px 0px 36px;
+    padding: 0px 36px;
     border-bottom: 2px solid #dedede;
+    height: 52px;
 }
 
 .nav-cat-list-item {

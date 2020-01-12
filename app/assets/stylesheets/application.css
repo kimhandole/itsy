@@ -13,6 +13,7 @@
  *= require reset.css
  *= require header.css
  *= require nav_cat.css
+ *= require hompage.css
  *= require_tree .
  *= require_self
  */

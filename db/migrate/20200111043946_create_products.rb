@@ -4,7 +4,7 @@ class CreateProducts < ActiveRecord::Migration[5.2]
       t.string :title, null: false
       t.text :description, null: false
       t.decimal :price, null: false, precision: 15, scale: 2
-      t.integer :seller_id, null: false
+      t.integer :shop_id, null: false
       t.integer :category_id, null: false
       t.integer :cart_id
       t.string :picture_url
@@ -14,7 +14,7 @@ class CreateProducts < ActiveRecord::Migration[5.2]
 
     add_index :products, :title
     add_index :products, :description
-    add_index :products, :seller_id
+    add_index :products, :shop_id
     add_index :products, :cart_id
     add_index :products, :category_id
   end

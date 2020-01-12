@@ -4,10 +4,11 @@ import {
     Link,
     Switch
 } from 'react-router-dom';
-import Modal from './modal/modal';
-import GreetingContainer from "./greeting/greeting_container";
-import NavCat from "./nav_cat/nav_cat";
 import { AuthRoute } from '../util/route_util';
+import Modal from './modal/modal';
+import GreetingContainer from './greeting/greeting_container';
+import NavCat from "./nav_cat/nav_cat";
+import HomePageContainer from './homepage/homepage_container';
 
 const App = () => (
     <div id="app">
@@ -19,8 +20,10 @@ const App = () => (
             <GreetingContainer />
         </header>
         <NavCat />
+
         <Switch>
-            
+            <Route exact path='/' component={HomePageContainer} />
+
         </Switch>
     </div>
 );
