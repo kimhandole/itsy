@@ -19,7 +19,8 @@ const App = () => (
             </Link>
             <GreetingContainer />
         </header>
-        <NavCat />
+
+            <NavCat />
 
         <Switch>
             <Route exact path='/' component={HomePageContainer} />

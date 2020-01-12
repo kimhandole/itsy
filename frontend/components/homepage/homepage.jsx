@@ -133,7 +133,7 @@ class HomePage extends React.Component {
                         </span>
                         <span className="banner-title-text">
                             Secure shopping
-                            </span>
+                        </span>
                     </p>
                     <p className="banner-description">
                         <span>
