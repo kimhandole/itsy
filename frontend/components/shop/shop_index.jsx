@@ -6,7 +6,7 @@ class ShopIndex extends Component {
     }
 
     componentDidMount() {
-        this.props.fetchShops()
+        // this.props.fetchShops()
     }
 
     render() {
