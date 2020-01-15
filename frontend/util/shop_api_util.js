@@ -1,10 +1,12 @@
-export const fetchShops = data => (
-    $.ajax({
-        method: 'GET',
-        url: 'api/shops',
-        data
-    })
-);
+export const fetchShops = (owner_id) => {
+    console.log(owner_id, "ownerId")
+    return (
+        $.ajax({
+            method: 'GET',
+            url: `api/owner/${owner_id}/shops`
+        })
+    );
+}
 
 export const fetchShop = id => (
     $.ajax({
@@ -12,7 +14,6 @@ export const fetchShop = id => (
         url: `api/shops/${id}`
     })
 );
-
 
 export const createShop = shopForm => (
     $.ajax({

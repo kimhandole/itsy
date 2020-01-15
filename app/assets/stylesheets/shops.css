@@ -1,0 +1,148 @@
+.shops {
+    color: #222;
+    padding: 0px 18px;
+}
+
+.shops-banner-container {
+    padding: 30px 12px 12px;
+    line-height: 1.2;
+    -webkit-font-smoothing: antialiased;
+}
+
+.shops-banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.shops-banner-title {
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 1.2;
+    margin-bottom: 6px;
+}
+
+.shops-banner-description {
+    font-size: 14px;
+    padding: 0px 18px;
+    margin: 0px 0px 30px;
+    text-align: center;
+}
+
+.shops-main {
+    border-radius: 3px;
+    background-color: #FFF;
+    border: 1px solid #E1E3DF;
+    border-bottom-color: #CBCCC9;
+    margin: 0 0 12px;
+    padding: 36px 36px 0px 36px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.shops-main-container {
+    padding: 0px 18px;
+}
+
+.shop {
+    width: 22%;
+    height: 280px;
+    border-radius: 3px;
+    background-color: #FFF;
+    border: 1px solid #E1E3DF;
+    border-bottom-color: #CBCCC9;
+    cursor: pointer;
+    margin-bottom: 36px;
+}
+
+.shop-top {
+    height: 172px;
+    margin: 2px;
+    background-color: #faf9f5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.shop-add {
+    font-family: "SSStandard";
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+    text-rendering: optimizeLegibility;
+    white-space: nowrap;
+    font-feature-settings: "liga";
+    -webkit-font-smoothing: antialiased;
+    font-size: 50px;
+    line-height: 1;
+    color: #83CBDC;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+}
+
+.shop-add-text {
+    color: #83CBDC;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.shop-bottom {
+    border-top: 1px solid #E1E3DF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.shop-title {
+    padding-top: 12px;
+    font-size: 16px;
+    font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* shop form */
+.shop-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.shop-form-title-container {
+    border-radius: 3px;
+    background-color: #FFF;
+    border: 1px solid #E1E3DF;
+    border-bottom-color: #CBCCC9;
+    margin: 12px 36px;
+}
+
+.shop-form-title-inner-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px 85px;
+    padding: 18px 0px;
+}
+
+.shop-form-title-input {
+    height: 30px;
+    padding: 9px 12px;
+    font-size: 16px;
+    border-radius: 3px;
+    transition: opacity 0.3s ease-out;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-top-color: rgba(0, 0, 0, 0.2);
+    width: 100%;
+}
+
+.shop-form-title-inner-container p {
+    margin: 12px 12px 0px 12px;
+    padding: 0px 18px;
+    text-align: center;
+    color: rgb(89, 89, 89);
+}
+
+.shop-buttons {
+    margin-top: 12px;
+}

@@ -8,11 +8,11 @@ const shopsReducer = (state = {}, action) => {
 
     switch (action.type) {
         case RECEIVE_SHOPS:
-            return Object.assign({}, action.shops);
+            return Object.assign({}, state, action.shops);
             
         case RECEIVE_SHOP:
-            const newShop = { [action.shop.id]: action.shop };
-            return Object.assign({}, state, newShop);
+            const shop = { [action.shop.id]: action.shop };
+            return Object.assign({}, state, shop);
 
         default:
             return state;

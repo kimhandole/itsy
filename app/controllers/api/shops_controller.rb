@@ -1,10 +1,14 @@
 class Api::ShopsController < ApplicationController
     def index
-        @shops = Shop.all
+        @shops = Shop.where(:owner_id => params[:owner_id])
+        
+        render :index
     end
 
     def show
         @shop = Shop.find(params[:id])
+
+        render :show
     end
 
     def create

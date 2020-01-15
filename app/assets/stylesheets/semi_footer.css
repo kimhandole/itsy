@@ -1,0 +1,171 @@
+.semi-footer {
+    margin-top: 400px;
+    padding: 30px;
+    background-color: #FDEBD2;
+    font-size: 14px;
+    line-height: 1.4;
+    -webkit-font-smoothing: antialiased;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #222222;
+    text-align: center;
+}
+
+.semi-footer-top {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 36px;
+}
+
+.semi-footer-top-mid h2 {
+    margin-bottom: 12px;
+    font-size: 44px;
+    line-height: 48px;
+    font-family: "Guardian-EgypTT",serif;
+    font-weight: 300;
+}
+
+.semi-footer-top-mid a {
+    color: inherit;
+    text-decoration: underline;
+    transition: opacity 200ms ease-out;
+    font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+}
+
+#what-is-itsy-right-top {
+
+}
+
+#what-is-itsy-right-top-img {
+    transform-origin: 100px 100px;
+}
+
+.semi-footer-mid {
+    display: flex;
+    margin-bottom: 12px;
+    padding-top: 36px;
+}
+
+.semi-footer-mid h3 {
+    font-size: 32px;
+    line-height: 36px;
+    font-weight: 100;
+    margin: 0px 0px 6px 0px;
+}
+
+.semi-footer-mid p {
+    font-size: 16px;
+    font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+}
+
+.semi-footer-mid-first {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 24px;
+}
+
+.semi-footer-mid-second {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 0px 24px;
+}
+
+.semi-footer-mid-third {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 0px 24px;
+}
+
+.semi-footer-bot {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 36px;
+}
+
+.semi-footer-bot-mid {
+    margin: 24px 0px 0px 0px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Graphik Webfont", -apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+}
+
+.semi-footer-bot-mid h4 {
+    margin: 0px;
+}
+
+.semi-footer-bot-mid button {
+    font-size: 16px;
+    margin: 12px 0px 0px;
+    padding: 12px 18px;
+    border-radius: 24px;
+    font-weight: bold;
+    line-height: 1.5;
+    vertical-align: middle;
+    border: 2px solid #222222;
+    transition: transform 200ms cubic-bezier(0.345, 0.115, 0.135, 1.42),opacity 150ms ease-out;
+}
+
+.semi-footer-bot-mid button:hover {
+    box-shadow: 0 4px 20px rgba(34, 34, 34, 0.15);
+    border-width: 3px;
+    padding: 11px 18px;
+}
+
+#what-is-etsy-left-blue-light-Image1010 {
+    transform-origin: 150px 150px;
+}
+
+#what-is-etsy-right-top-Image1024 {
+    transform-origin: 100px 100px;
+}
+
+#what-is-etsy-right-bottom-Image1036 {
+    transform-origin: 140px 140px;
+}
+
+#what-is-etsy-left-blue-dark-Image1050 {
+    transform-origin: 100px 100px;
+}
+
+.semi-footer-shapes {
+    position: absolute;
+    width: 100%;
+}
+
+.semi-footer-text {
+    z-index: 1;
+}
+
+.semi-footer-shapes-first {
+    position: absolute;
+    left: -10px;
+    top: 100px;
+}
+
+.semi-footer-shapes-second {
+    position: absolute;
+    top: 50px;
+    left: -40px;
+}
+
+.semi-footer-shapes-third {
+    position: absolute;
+    bottom: -260px;
+    right: -110px;
+}
+
+.semi-footer-shapes-forth {
+    position: absolute;
+    top: -295px;
+    right: 60px;
+}

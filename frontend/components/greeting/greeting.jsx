@@ -10,7 +10,6 @@ class Greeting extends React.Component {
     }
 
     handleShopManagerClick() {
-        console.log(this.props);
         this.props.history.push('/shops');
     }
 
@@ -40,7 +39,7 @@ class Greeting extends React.Component {
     sessionLinks(openModal) {
         return (
             <nav className="login-signup">
-                <button onClick={() => openModal('Sign in')}>Sign in</button>
+                <button onClick={() => openModal('open')}>Sign in</button>
             </nav>
         );
     }

@@ -5,6 +5,7 @@
     padding: 0px 36px;
     border-bottom: 2px solid #dedede;
     height: 52px;
+    -webkit-font-smoothing: antialiased;
 }
 
 .nav-cat-list-item {

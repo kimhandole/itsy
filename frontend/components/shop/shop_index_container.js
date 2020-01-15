@@ -4,12 +4,13 @@ import ShopIndex from './shop_index';
 import { fetchShops } from '../../actions/shop_actions';
 import { selectShops } from '../../reducers/selectors';
 
-const mapStateToProps = state => ({
-    // shop: selectShops(state)
+const mapStateToProps = ( state ) => ({
+    shops: selectShops(state),
+    currentUser: state.session.currentUser
 });
 
 const mapDispatchToProps = dispatch => ({
-    fetchShops: () => dispatch(fetchShops())
+    fetchShops: (owner_id) => dispatch(fetchShops(owner_id))
 });
 
 export default connect(

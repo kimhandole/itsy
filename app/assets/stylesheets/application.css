@@ -14,6 +14,9 @@
  *= require header.css
  *= require nav_cat.css
  *= require hompage.css
+ *= require shops.css
+ *= require footer.css
+ *= require semi_footer.css
  *= require_tree .
  *= require_self
  */

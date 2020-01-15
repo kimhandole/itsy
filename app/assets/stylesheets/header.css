@@ -35,7 +35,6 @@ header h1 {
 
 .login-signup:hover {
     background-color: #efefef;
-    
 }
 
 .header-group {
@@ -110,11 +109,11 @@ header h1 {
 }
 
 .arrow-down {
-  width: 0; 
-  height: 0; 
-  border-left: 4px solid transparent;
-  border-right: 4px solid transparent;
-  border-top: 6px solid #bbb;
+    width: 0; 
+    height: 0; 
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 6px solid #bbb;
 }
 
 .header-user-you-group {

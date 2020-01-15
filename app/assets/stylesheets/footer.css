@@ -1,0 +1,27 @@
+.footer {
+    background-color: #232347;
+    padding: 18px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    -webkit-font-smoothing: antialiased;
+    z-index: 2;
+    margin-top: 260px;
+}
+
+.footer button {
+    color: #ffffff;
+    vertical-align: middle;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 1.4;
+    min-height: 36px;
+    min-width: 36px;
+    padding: 9px 15px;
+    border-radius: 24px;
+    transition: all 0.3s ease 0s;
+}
+
+.footer button:hover {
+    background-color: #333355;
+}

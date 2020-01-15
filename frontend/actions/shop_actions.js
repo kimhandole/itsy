@@ -20,8 +20,8 @@ export const receiveShopsErrors = errors => ({
     errors
 });
 
-export const fetchShops = () => dispatch => (
-    APIUtil.fetchShops().then(shops => (
+export const fetchShops = (owner_id) => dispatch => (
+    APIUtil.fetchShops(owner_id).then(shops => (
         dispatch(receiveShops(shops))
     ))
 );

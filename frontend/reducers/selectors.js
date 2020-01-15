@@ -1,1 +1,1 @@
-export const selectShops = state => Object.values(state.entities.shop);
+export const selectShops = state => Object.values(state.entities.shops);
