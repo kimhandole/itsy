@@ -61,7 +61,7 @@ class Greeting extends React.Component {
                     <ul className="dropdown-list">
                         <li>
                             <a href="#">
-                                <h2 className="header-name">{currentUser.first_name}</h2>
+                                <h2 className="header-name">{this.props.entities.users[this.props.currentUser].first_name}</h2>
                             </a>
                         </li>
                         <li onClick={logout}>
