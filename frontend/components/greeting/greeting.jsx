@@ -48,7 +48,7 @@ class Greeting extends React.Component {
         return (
             <hgroup className="header-group">
                 {this.shopManagerGroup()}
-                <ul onClick={() => this.handleDropDown()} id="header-user-group">
+                <ul onClick={this.handleDropDown} id="header-user-group">
                     <li id="header-user-img-list-item">
                         <img id="header-user-img" src="https://www.etsy.com/images/avatars/default_avatar_75x75.png" alt=""></img>
                     </li>

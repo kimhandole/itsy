@@ -4,13 +4,12 @@
     align-items: center;
     padding: 0px 36px;
     border-bottom: 2px solid #dedede;
-    height: 52px;
+    height: 32px;
     -webkit-font-smoothing: antialiased;
 }
 
 .nav-cat-list-item {
     color: #222222;
-    padding-bottom: 12px;
     transition: all 0.15s ease 0s;
     margin-right: 12px;
 }

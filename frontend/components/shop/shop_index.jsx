@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ShopIndexItem from './shop_index_item';
 
 class ShopIndex extends Component {
     constructor(props) {
@@ -6,26 +7,15 @@ class ShopIndex extends Component {
 
     }
 
-    handleAddShop() {
-        this.props.history.push('/shops/new');
+    componentDidMount() {
+        if (this.props.shops.length === 0) {
+            this.props.fetchShops(this.props.currentUser);
+        }
+        
     }
 
-    shop(title, id) {
-        return (
-            <div className="shop" key={id}>
-                <div className="shop-top">
-                </div>
-                <div className="shop-bottom">
-                    <div className="shop-title">
-                        {title}
-                    </div>
-                    <div className="shop-buttons">
-                        <button>Edit</button>
-                        <button>Delete</button>
-                    </div>
-                </div>
-            </div>
-        );
+    handleAddShop() {
+        this.props.history.push('/shops/new');
     }
 
     shopsPageBanner() {
@@ -42,7 +32,7 @@ class ShopIndex extends Component {
     }
 
     shopsPageMain() {
-        const { shops } = this.props;
+        const { shops, deleteShop } = this.props;
 
         return (
             <div className="shops-main">
@@ -55,17 +45,12 @@ class ShopIndex extends Component {
 
                     </div>
                 </div>
-                {shops.map((shop) => this.shop(shop.title, shop.id))}
+                {shops.map((shop, id) => <ShopIndexItem shop={shop} key={id} deleteShop={deleteShop}/>)}
             </div>
         );
     }
 
-    componentDidMount() {
-        this.props.fetchShops(this.props.currentUser);
-    }
-
     render() {
-        const { shops } = this.props;
 
         return (
             <section className="shops">

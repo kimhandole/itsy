@@ -1,5 +1,4 @@
 export const fetchShops = (owner_id) => {
-    console.log(owner_id, "ownerId")
     return (
         $.ajax({
             method: 'GET',
@@ -35,3 +34,10 @@ export const updateShop = (formData) => {
     })
 
 };
+
+export const deleteShop = id => (
+    $.ajax({
+        method: 'DELETE',
+        url: `api/shops/${id}`
+    })
+)

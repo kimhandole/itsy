@@ -1,3 +1,3 @@
 json.shop do
-    json.extract! @shop, :title, :owner_id
+    json.extract! @shop, :id, :title, :owner_id
 end

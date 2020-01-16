@@ -96,11 +96,16 @@
     align-items: center;
 }
 
+.shop-buttons button:hover {
+    color: lightslategray;
+}
+
 .shop-title {
-    padding-top: 12px;
+    padding-top: 24px;
     font-size: 16px;
     font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
     -webkit-font-smoothing: antialiased;
+    font-weight: 500;
 }
 
 /* shop form */
@@ -136,6 +141,14 @@
     width: 100%;
 }
 
+.shop-form-title-input:hover {
+    border-color: #adaeaa;
+}
+
+.shop-form-title-input:focus {
+    border-color: rgba(0, 0, 0, 0.8);
+}
+
 .shop-form-title-inner-container p {
     margin: 12px 12px 0px 12px;
     padding: 0px 18px;
@@ -144,5 +157,36 @@
 }
 
 .shop-buttons {
-    margin-top: 12px;
+    margin-top: 14px;
+    display: flex;
+    font-weight: 300;
+}
+
+.shop-form-save {
+    position: absolute;
+    bottom: 0px;
+    height: 62px;
+    border-top: solid 1px #e2e3e0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.shop-form-save input {
+    margin-right: 36px;
+    background-color: black;
+    color: white;
+    height: 20px;
+    padding: 8px 12px;
+    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 1.4;
+    -webkit-font-smoothing: antialiased;
+}
+
+.shop-form-save input:hover {
+    background-color: #3c3c3c;
 }
