@@ -28,8 +28,9 @@
     "npm": "6.13.4"
   },
   "scripts": {
+    "start": "node index.js",
     "postinstall": "webpack",
-    "start": "webpack --mode=development --watch",
+    "webpack": "webpack --mode=development --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
