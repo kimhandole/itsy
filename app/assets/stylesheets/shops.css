@@ -66,6 +66,10 @@
     align-items: center;
 }
 
+#shop-add-top {
+    background-color: #f0fbfd;
+}
+
 .shop-add {
     font-family: "SSStandard";
     font-style: normal;
@@ -101,7 +105,8 @@
 }
 
 .shop-title {
-    padding-top: 24px;
+    text-align: center;
+    padding: 24px 12px 0px 12px;
     font-size: 16px;
     font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
     -webkit-font-smoothing: antialiased;

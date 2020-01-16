@@ -37,7 +37,7 @@ class ShopIndex extends Component {
         return (
             <div className="shops-main">
                 <div className="shop" id="shop-add" onClick={() => this.handleAddShop()}>
-                    <div className="shop-top">
+                    <div className="shop-top" id="shop-add-top">
                         <p className="shop-add">+</p>
                         <p className="shop-add-text">Add a shop</p>
                     </div>

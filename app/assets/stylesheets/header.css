@@ -66,6 +66,10 @@ header h1 {
     fill: #666666;
 }
 
+#header-shop-icon:hover {
+    fill: #000000;
+}
+
 #header-shop-text {
     white-space: nowrap;
     color: #595959;

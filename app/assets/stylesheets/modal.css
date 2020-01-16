@@ -54,6 +54,10 @@
     -o-transition: all 0.30s ease-in-out;
 }
 
+.login-input:hover {
+    border-color: #adaeaa;
+}
+
 .login-input:focus {
     border-color: #222222;
 }

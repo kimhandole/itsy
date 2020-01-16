@@ -1,16 +1,29 @@
 .footer {
-    background-color: #232347;
+    background-color: #ffffff;
     padding: 18px 24px 18px 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     -webkit-font-smoothing: antialiased;
-    z-index: 2;
-    margin-top: 260px;
+    margin-top: 135px;
+    border-top: 1px solid rgba(34, 34, 34, 0.15) !important
+}
+
+#footer-dark {
+    background-color: #242347;
+    z-index: 3;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+}
+
+#footer-dark button {
+    color: #ffffff;
+    font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
 }
 
 .footer button {
-    color: #ffffff;
+    color: #222222;
     vertical-align: middle;
     font-weight: bold;
     font-size: 13px;
@@ -20,13 +33,9 @@
     padding: 9px 15px;
     border-radius: 24px;
     transition: all 0.3s ease 0s;
+    display: flex;
 }
 
 .footer button:hover {
     background-color: #333355;
-}
-
-.footer-light {
-    background-color: white;
-    border: 1px solid rgb(226, 227, 224);;
 }

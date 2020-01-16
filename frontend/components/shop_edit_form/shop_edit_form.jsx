@@ -13,12 +13,6 @@ class ShopEditForm extends React.Component {
         this.updateTitle = this.updateTitle.bind(this);
     }
 
-    componentDidMount() {
-        const elements = document.getElementsByClassName("footer");
-        const footer = elements[0];
-        footer.classList.add(".footer-light");
-    }
-
     updateTitle() {
         return e => this.setState({
             title: e.currentTarget.value
