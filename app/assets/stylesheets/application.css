@@ -17,6 +17,7 @@
  *= require shops.css
  *= require footer.css
  *= require semi_footer.css
+ *= require shop_show.css
  *= require_tree .
  *= require_self
  */

@@ -5,16 +5,19 @@
     justify-content: space-between;
     align-items: center;
     -webkit-font-smoothing: antialiased;
-    margin-top: 135px;
-    border-top: 1px solid rgba(34, 34, 34, 0.15) !important
+    margin-top: 24px;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    border-top: 1px solid rgba(34, 34, 34, 0.15) !important;
 }
 
 #footer-dark {
     background-color: #242347;
     z-index: 3;
-    position: absolute;
     left: 0px;
     right: 0px;
+
 }
 
 #footer-dark button {

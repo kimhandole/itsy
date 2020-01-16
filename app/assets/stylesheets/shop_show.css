@@ -1,0 +1,166 @@
+.shop-show {
+    display: flex;
+    flex-direction: column;
+    color: #222;
+    padding: 24px 24px 0px 24px;
+    font-size: 14px;
+    line-height: 1.4;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+}
+
+.shop-show-add-product {
+    padding: 8px 14px;
+    background-color: #222;
+    color: white;
+    border-radius: 3px;
+}
+
+.shop-show-add-product:hover {
+    background-color: #3c3c3c;
+}
+
+.shop-show-and-owner-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 54px;
+}
+
+.shop-show-owner-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 17%
+}
+
+.shop-show-owner-icon-firstname {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.shop-show-owner-icon-firstname img {
+    width: 64px;
+    margin-bottom: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#shop-show-owner-img:hover ~ #shop-show-owner-firstname {
+    color: #595959 !important;
+    text-decoration: underline;
+}
+
+#shop-show-owner-firstname:hover {
+    color: #595959 !important;
+    text-decoration: underline;
+}
+
+.shop-show-owner-icon-firstname span {
+    font-size: 14px;
+    font-weight: 400 !important;
+    color: #222 !important;
+    cursor: pointer;
+}
+
+.shop-show-owner-info span {
+    color: #757575;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 14.4px;
+    margin-bottom: 12px;
+}
+
+.shop-show-img {
+    height: 146px;
+    width: 146px;
+}
+
+.shop-show-img img {
+    border-radius: 3px;
+}
+
+.shop-show-info {
+    display: flex;
+}
+
+.shop-show-title-buttons {
+    margin-left: 18px;
+}
+
+.shop-show-title {
+    font-size: 26px;
+    color: rgb(34, 34, 34);
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.shop-show-products-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 300px;
+}
+
+.shop-show-products-container p {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.shop-policies {
+    border-top: 1px solid #ccc;
+    padding-top: 36px;
+    margin-bottom: 12px;
+    display: flex;
+}
+
+.shop-policies-title {
+    font-size: 20px;
+    font-weight: 600;
+    width: 25%;
+}
+
+.shop-policies-detail-container {
+    display: flex;
+    flex-direction: column;
+    color: #595959;
+}
+
+.shop-policies-detail {
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+.shop-policies-detail-detail {
+    font-size: 12px;
+}
+
+.shop-show-policies-icon {
+    padding: 2px;
+    width: 35px;
+    height: 20px;
+    border: 1px solid #D4D4D4;
+    border-radius: 3px;
+    margin-right: 3px;
+}
+
+.a {
+    opacity: 0;
+}
+
+.b {
+    fill :#fff;
+}
+
+.c {
+    fill: #ff5f00;
+} 
+
+.d {
+    fill: #eb001b;
+} 
+
+.e {
+    fill: #f79e1b;
+}

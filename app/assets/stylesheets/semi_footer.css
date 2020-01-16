@@ -1,5 +1,6 @@
 .semi-footer {
     margin-top: 400px;
+    margin-bottom: 30px;
     padding: 30px;
     background-color: #FDEBD2;
     font-size: 14px;
@@ -160,12 +161,12 @@
 
 .semi-footer-shapes-third {
     position: absolute;
-    bottom: -260px;
+    bottom: -287px;
     right: -110px;
 }
 
 .semi-footer-shapes-forth {
     position: absolute;
-    top: -295px;
+    top: -330px;
     right: 60px;
 }

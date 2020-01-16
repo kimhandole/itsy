@@ -64,7 +64,7 @@ class HomePage extends React.Component {
                             </g>
                         </svg >
                     </span >
-                </div >
+                </div>
                 <div className="semi-footer-text">
                     <div className="semi-footer-top">
                         <div>
