@@ -27,7 +27,7 @@ npm run webpack
 ```
 
 ## Key features
-User can sign up or sign in to make create, edit, delete or see a shop that belongs to the user. 
+User can sign up or sign in to make create, edit, delete or see shops that belongs to the user. 
 
 ## Technical details
 ```
