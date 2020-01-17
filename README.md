@@ -46,7 +46,7 @@ class ShopIndex extends Component {
       ...
     }
 ```
-#### Prevent fetching old data after new data has already updated on front-end 
+#### Prevent fetching old data and update after new data has already updated on front-end 
 * after create, edit or delete a shop, front-end fetched a updated shop to front-end, `fetchShop(shopId)`
 * then it redirects to shop index page which triggers fetch all shops from database
 * if database has not been updated with new data, above fetch, `fetchShops()` will re-update shop index page with old data
