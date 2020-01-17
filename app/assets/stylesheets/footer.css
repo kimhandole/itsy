@@ -38,6 +38,10 @@
     display: flex;
 }
 
-.footer button:hover {
+#footer-dark button:hover {
     background-color: #333355;
+}
+
+.footer button:hover {
+    background-color: #eeeeee;
 }
