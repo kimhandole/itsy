@@ -55,4 +55,4 @@ class ShopIndex extends Component {
 * as a result, shop index component avoids extra unnecessary fetching that could take a lot of time and compute if user has many shops, also less stress to the server and backend
 
 ## Author
-[Han Kim](https://www.linkedin.com/in/han-kim-76979996/)
+[Han Kim](https://www.linkedin.com/in/han-dole-kim-76979996/)

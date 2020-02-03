@@ -13,7 +13,7 @@ function Modal({modal, closeModal}) {
     case 'open':
       component = <LoginFormContainer />;
       break;
-    case 'register':
+    case 'Register':
       component = <SignupFormContainer />;
       break;
 
