@@ -1,3 +1,12 @@
+#root {
+    display: flex;
+    justify-content: center;
+}
+
+#app {
+    max-width: 1400px;
+}
+
 .homepage {
     font-family: "Guardian-EgypTT",serif;
 }
