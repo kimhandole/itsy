@@ -4,6 +4,9 @@ import {
     REMOVE_SHOP
 } from '../actions/shop_actions';
 
+import { LOGOUT_CURRENT_USER } from '../actions/session_actions';
+
+
 const shopsReducer = (state = {}, action) => {
     Object.freeze(state)
 
@@ -19,6 +22,9 @@ const shopsReducer = (state = {}, action) => {
             const newObject = Object.assign({}, state);
             delete newObject[action.id];
             return newObject;
+
+        case LOGOUT_CURRENT_USER:
+            return {};
 
         default:
             return state;
