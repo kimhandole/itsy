@@ -5,6 +5,7 @@ class ShopIndex extends Component {
     constructor(props) {
         super(props);
 
+        this.handleAddShop = this.handleAddShop.bind(this);
     }
 
     componentDidMount() {
@@ -36,7 +37,7 @@ class ShopIndex extends Component {
 
         return (
             <div className="shops-main">
-                <div className="shop" id="shop-add" onClick={() => this.handleAddShop()}>
+                <div className="shop" id="shop-add" onClick={this.handleAddShop}>
                     <div className="shop-top" id="shop-add-top">
                         <p className="shop-add">+</p>
                         <p className="shop-add-text">Add a shop</p>
@@ -51,7 +52,6 @@ class ShopIndex extends Component {
     }
 
     render() {
-
         return (
             <section className="shops">
                 <div className="shops-banner-container">

@@ -5,7 +5,7 @@
     justify-content: space-between;
     align-items: center;
     -webkit-font-smoothing: antialiased;
-    margin-top: 24px;
+    /* margin-top: 24px; */
     position: absolute;
     left: 0px;
     right: 0px;

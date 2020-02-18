@@ -18,6 +18,7 @@
  *= require footer.css
  *= require semi_footer.css
  *= require shop_show.css
+ *= require product.css
  *= require_tree .
  *= require_self
  */

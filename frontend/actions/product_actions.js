@@ -1,4 +1,4 @@
-import * as APIUtil from '../util/products_api_util';
+import * as APIUtil from '../util/product_api_util';
 
 export const RECEIVE_ALL_PRODUCTS = 'RECEIVE_ALL_PRODUCTS';
 export const RECEIVE_PRODUCTS = 'RECEIVE_PRODUCTS';

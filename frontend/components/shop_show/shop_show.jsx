@@ -5,6 +5,16 @@ import { withRouter } from 'react-router-dom';
 class ShopShow extends React.Component {
     constructor(props) {
         super(props);
+
+        this.handleAddProduct = this.handleAddProduct.bind(this);
+    }
+
+    componentDidMount() {
+        this.props.fetchShop(this.props.shop.id);
+    }
+
+    handleAddProduct() {
+        this.props.history.push('/products/new');
     }
 
     shopInfo() {
@@ -25,7 +35,7 @@ class ShopShow extends React.Component {
                         {this.props.shop.title}
                     </div>
                     <div className="shop-show-buttons">
-                        <button className="shop-show-add-product">Add product</button>
+                        <button className="shop-show-add-product" onClick={this.handleAddProduct}>Add product</button>
                     </div>
                 </div>
             </div>
@@ -33,8 +43,6 @@ class ShopShow extends React.Component {
     }
 
     ownerInfo() {
-
-        console.log(this.props, "!@#!@#!@#")
         return (
             <div className="shop-show-owner-info">
                 <span>SHOP OWNER</span>
@@ -153,7 +161,6 @@ class ShopShow extends React.Component {
             </div>
         );
     }
-
 
     shopPolices() {
         return (

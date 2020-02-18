@@ -13,6 +13,7 @@ import ShopIndexContainer from './shop/shop_index_container';
 import ShopFormContainer from './shop_form/shop_form_container';
 import ShopEditFormContainer from './shop_edit_form/shop_edit_container';
 import ShopShowContainer from './shop_show/shop_show_container';
+import ProductFormContainer from './product_form/product_form_container';
 import Footer from './footer/footer';
 
 const App = () => (
@@ -34,6 +35,9 @@ const App = () => (
             <ProtectedRoute exact path="/shops/new" component={ShopFormContainer} />
             <ProtectedRoute exact path="/shops/:shopId/edit" component={ShopEditFormContainer} />
             <ProtectedRoute exact path='/shops/:shopId' component={ShopShowContainer} />
+
+            <ProtectedRoute exact path="/products/new" component={ProductFormContainer} />
+
         </Switch>
         <Footer />
     </div>
