@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 class HomePage extends React.Component {
     constructor(props) {
         super(props);
-
     }
 
     componentDidMount() {
