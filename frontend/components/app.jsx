@@ -38,7 +38,7 @@ const App = () => (
             <ProtectedRoute exact path="/products/new" component={ProductFormContainer} />
 
         </Switch>
-        {/* <Footer /> */}
+        <Footer />
     </div>
 );
 

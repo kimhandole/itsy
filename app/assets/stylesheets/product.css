@@ -142,7 +142,7 @@
     width: 100%;
     height: 38px;
     margin-left: 18px;
-    margin-bottom: 12px;
+    margin-bottom: 18px;
     display: flex;
 }
 
@@ -185,7 +185,6 @@
 
 .product-form-detail-description-container {
     margin-left: 18px;
-    margin-top: 6px;
     margin-bottom: 24px;
     width: 100%;
     height: 250px;

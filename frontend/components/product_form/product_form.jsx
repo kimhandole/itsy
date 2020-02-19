@@ -33,6 +33,16 @@ class ProductForm extends React.Component {
         console.log(this.props, "props");
     }
 
+    componentDidMount() {
+        const footer = document.getElementsByClassName("footer")[0];
+        footer.style.display = "none";
+    }
+
+    componentWillUnmount() {
+        const footer = document.getElementsByClassName("footer")[0];
+        footer.style.display = "flex";
+    }
+
     updateTitle() {
         return e => this.setState({
             title: e.currentTarget.value
@@ -181,11 +191,11 @@ class ProductForm extends React.Component {
                         <p className="product-form-photos-descriptions-text-title">Title *</p>
                         <p className="product-form-photos-descriptions-text-description">Include keywords that buyers would use to search for your item.</p>
                         <p className="product-form-photos-descriptions-text-title">About this listing *</p>
-                        <p className="product-form-photos-descriptions-text-description white">Tell buyers background information about your item.</p>
+                        <p className="product-form-photos-descriptions-text-description white">Tell</p>
                         <p className="product-form-photos-descriptions-text-title">Category *</p>
                         <p className="product-form-photos-descriptions-text-description">Select a word description of your item to get category suggestions that will help more shoppers find it.</p>
                         <p className="product-form-photos-descriptions-text-title">Type *</p>
-                        <p className="product-form-photos-descriptions-text-description white">Type a two- or three-word description of your item to get category suggestions that will help more shoppers find it.</p>
+                        <p className="product-form-photos-descriptions-text-description white">Type</p>
                         <p className="product-form-photos-descriptions-text-title">Description *</p>
                         <p className="product-form-photos-descriptions-text-description">Start with a brief overview that describes your item’s finest features. Shoppers will only see the first few lines of your description at first, so make it count!</p>
                         <p className="product-form-photos-descriptions-text-description">Not sure what else to say? Shoppers also like hearing about your process, and the story behind this item.</p>
@@ -324,11 +334,17 @@ class ProductForm extends React.Component {
             <div className="footer-type-2-container">
                 <footer className="footer-type-2">
                     <div>
-                        Created by Han Dole Kim.
+                        Created by <a href="https://handolekim.com" target="_blank"><u>Han Dole Kim</u></a>
                     </div>
-                    <FontAwesomeIcon icon={faGithub} size="2x" />
-                    <FontAwesomeIcon icon={faLinkedin} size="2x" />
-                    <FontAwesomeIcon icon={faAngellist} size="2x" />
+                    <a href="https://github.com/kimhandole/itsy" target="_blank">
+                        <FontAwesomeIcon icon={faGithub} size="2x" />
+                    </a>
+                    <a href="https://www.linkedin.com/in/han-dole-kim-76979996" target="_blank">
+                        <FontAwesomeIcon icon={faLinkedin} size="2x" />
+                    </a>
+                    <a href="https://angel.co/kimhandole" target="_blank">
+                        <FontAwesomeIcon icon={faAngellist} size="2x" />
+                    </a>
                 </footer>
                 <div className="empty-bottom">
 

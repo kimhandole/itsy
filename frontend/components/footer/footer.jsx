@@ -1,9 +1,11 @@
 import React from 'react';
+import { faGithub, faAngellist, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Footer = () => {
     return (
         <footer className="footer">
-            <button aria-label="Update your settings United States English (US) $ (USD)" aria-controls="wt-locale-picker-overlay">
+            <button>
                 <span>
                     <span >
                         <svg xmlns="http://www.w3.org/2000/svg"  xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
@@ -40,6 +42,20 @@ const Footer = () => {
                 </span >
                 &nbsp; United States &nbsp; | &nbsp; English(US) &nbsp; | &nbsp; $(USD)
             </button >
+            <section className="footer-right">
+                <div>
+                    Created by <a href="https://handolekim.com" target="_blank"><u>Han Dole Kim</u></a>
+                </div>
+                <a href="https://github.com/kimhandole/itsy" target="_blank">
+                    <FontAwesomeIcon icon={faGithub} size="2x" />
+                </a>
+                <a href="https://www.linkedin.com/in/han-dole-kim-76979996" target="_blank">
+                    <FontAwesomeIcon icon={faLinkedin} size="2x" />
+                </a>
+                <a href="https://angel.co/kimhandole" target="_blank">
+                    <FontAwesomeIcon icon={faAngellist} size="2x" />
+                </a>
+            </section>
         </footer>
     );
 }

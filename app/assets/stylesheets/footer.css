@@ -1,6 +1,6 @@
 .footer {
     background-color: #ffffff;
-    padding: 18px 24px 18px 0px;
+    padding: 18px 0px 18px 2px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -36,12 +36,23 @@
     border-radius: 24px;
     transition: all 0.3s ease 0s;
     display: flex;
+    cursor: text;
 }
 
-#footer-dark button:hover {
-    background-color: #333355;
+.footer-right {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
 }
 
-.footer button:hover {
-    background-color: #eeeeee;
+.footer-right > * {
+    margin-right: 18px;
+}
+
+.footer-right a:last-child {
+    margin-right: 16px;
+}
+
+.footer-white {
+    color: white;
 }

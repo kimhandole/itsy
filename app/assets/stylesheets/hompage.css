@@ -1,6 +1,9 @@
 #root {
     display: flex;
     justify-content: center;
+    -webkit-font-smoothing: antialiased;
+    transition: opacity 0.3s ease-out;
+    color: #222;
 }
 
 #app {

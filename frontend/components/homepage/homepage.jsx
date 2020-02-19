@@ -1,4 +1,6 @@
 import React from 'react';
+import { faGithub, faAngellist, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 class HomePage extends React.Component {
     constructor(props) {
@@ -15,56 +17,6 @@ class HomePage extends React.Component {
     semiFooter() {
         return (
             <div className="semi-footer">
-                <div className="semi-footer-shapes">
-                    <span className="semi-footer-shapes-first">
-                        <svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" svgjs="http://svgjs.com/svgjs" width="200" height="300" version="1.1" viewBox="0 0 200 300" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
-                            <defs id="what-is-etsy-left-blue-light-Defs1002">
-                                <clipPath id="what-is-etsy-left-blue-light-ClipPath1019">
-                                    <path id="what-is-etsy-left-blue-light-Path1009" d="M0.9,94.3c0,0-5.7-39.7,39.7-59.5c18.7-4.6,78.4-14,124.4,26.8c37.4,32.9,41.7,44.7,24.9,78.4     c-6.6,11.4-24.8,29.7-81.8,29.7c-33.2-0.6-64.8-12.9-78.5-25.8C10.2,129.4,2.9,113.4,0.9,94.3" fill="blue"></path>
-                                </clipPath>
-                            </defs>
-                            <g id="what-is-etsy-left-blue-light-G1008" transform="matrix(1,0,0,1,-99,100)">
-                                <image id="what-is-etsy-left-blue-light-Image1010" width="200" height="200" alt="" transform="matrix(1.0606601717798214,1.0606601717798212,-1.0606601717798212,1.0606601717798214,0,0)" clipPath="url(&quot;#what-is-etsy-left-blue-light-ClipPath1019&quot;)" href="https://img0.etsystatic.com/site-assets/brand-refresh/textures/custom/what_is_etsy_blue_light2.jpg"></image>
-                            </g>
-                        </svg>
-                    </span>
-                    <span className="semi-footer-shapes-second">
-                        <svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" svgjs="http://svgjs.com/svgjs" width="200" height="200" version="1.1" viewBox="0 0 200 200" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
-                            <defs id="what-is-etsy-left-blue-dark-Defs1047">
-                                <clipPath id="what-is-etsy-left-blue-dark-ClipPath1059">
-                                    <path id="what-is-etsy-left-blue-dark-Path1049" d="M192.9,74.8c-2.1-5.3-3.9-10.8-5.3-16.4c-3.8-16.9-24.3-38.6-33.2-46.7     c-8.9-8.1-26.8-9.5-38.6-7.5C93.6,7.8,71.4,9,51.9,21.2C47.3,24.1,27.7,39,22.7,43.3C10.7,53.7,2.5,66.1,2.2,83.6     c-1,8.3,3.3,17.4,2.7,26.4c-1.6,26.1,13.6,45.1,26.8,65c7.5,11.3,60.8,22.8,70.8,21.6c14.7-1.8,29.1-5.4,42.8-10.9     c11.2-4.2,20.5-12.4,26.1-23.1c1.8-3,3.8-5.9,6.2-8.5c19.6-23.7,25.8-49.9,15.5-79.3" fill="#232347"></path>
-                                </clipPath>
-                            </defs>
-                            <g id="what-is-etsy-left-blue-dark-G1048" transform="matrix(1,0,0,1,50,20)">
-                                <image id="what-is-etsy-left-blue-dark-Image1050" width="200" height="200" alt="" transform="matrix(0.3,0,0,0.3,0,0)" clipPath="url(&quot;#what-is-etsy-left-blue-dark-ClipPath1059&quot;)" href="https://img0.etsystatic.com/site-assets/brand-refresh/textures/custom/what_is_etsy_blue2.jpg"></image>
-                            </g>
-                        </svg >
-                    </span >
-                    <span className="semi-footer-shapes-third">
-                        <svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" svgjs="http://svgjs.com/svgjs" width="300" height="200" version="1.1" viewBox="0 0 300 200" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
-                            <defs id="what-is-etsy-right-bottom-Defs1033">
-                                <clipPath id="what-is-etsy-right-bottom-ClipPath1045">
-                                    <path id="what-is-etsy-right-bottom-Path1035" d="M-1,46.5l8.6,52.6l9.9,59.8l72.9-6l106.4-7.3l4.1-47L201,41l-106,2L-1,46.5z" fill="#f1641e"></path>
-                                </clipPath>
-                            </defs>
-                            <g id="what-is-etsy-right-bottom-G1034" transform="matrix(1,0,0,1,100,100)">
-                                <image id="what-is-etsy-right-bottom-Image1036" width="200" height="200" alt="" transform="matrix(1.378730854217091,-0.24310744873370377,0.24310744873370377,1.378730854217091,0,0)" clipPath="url(&quot;#what-is-etsy-right-bottom-ClipPath1045&quot;)" href="https://img0.etsystatic.com/site-assets/brand-refresh/textures/custom/what_is_etsy_orange2.jpg"></image>
-                            </g>
-                        </svg >
-                    </span >
-                    <span className="semi-footer-shapes-forth">
-                        <svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" svgjs="http://svgjs.com/svgjs" width="200" height="200" version="1.1" viewBox="0 0 200 200" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
-                            <defs id="what-is-etsy-right-top-Defs1021">
-                                <clipPath id="what-is-etsy-right-top-ClipPath1033">
-                                    <path id="what-is-etsy-right-top-Path1023" d="M126.4,161c-3-3.7-9-12.5-9-12.5L114,141c0,0-4-12.4-4.3-17.1c-0.6-9.3,1.9-16,5.6-24.5     c7.2-16.3,21.8-27.1,40.5-31.8l3.8-1.5l1.2-1.4l-14.5-48.9l-4.9-12.1c-2.9,0.5-8.4,2.9-11.1,3.6c-12.1,3.2-22,8.6-32.1,13.9     C87,27.8,69.3,45.2,69.3,45.2S52.8,62.3,47.8,74.8c-1.6,4.7-3,9.5-4,14.3C42,96,40.7,111.6,39.4,119c-1.4,8,2.8,27.8,2.8,27.8     s3,11.6,5.7,18.7c4.4,11.3,10.8,21.8,18.9,30.9c0,0,24.3-12.4,26.2-13.9s16.4-9,17.6-9.6c1.2-0.6,12.6-4.4,12.6-4.4l6-2.8     c0.2-0.3,0.3-0.7,0.4-1.1C129.6,164.4,126.5,161,126.4,161" fill="#faa129"></path>
-                                </clipPath>
-                            </defs>
-                            <g id="what-is-etsy-right-top-G1022" transform="matrix(1,0,0,1,0,0)">
-                                <image id="what-is-etsy-right-top-Image1024" width="200" height="200" alt="" transform="matrix(1,0,0,1,0,0)" clipPath="url(&quot;#what-is-etsy-right-top-ClipPath1033&quot;)" href="https://img0.etsystatic.com/site-assets/brand-refresh/textures/custom/what_is_etsy_yellow.jpg"></image>
-                            </g>
-                        </svg >
-                    </span >
-                </div>
                 <div className="semi-footer-text">
                     <div className="semi-footer-top">
                         <div>
@@ -74,8 +26,8 @@ class HomePage extends React.Component {
                             <h2>
                                 What is Itsy?
                         </h2>
-                            <a href="#">
-                                Read our wonderfully weird story
+                        <a href="https://github.com/kimhandole/itsy" target="_blank">
+                            Read our wonderfully weird story
                         </a>
                         </div>
                         <div className="semi-footer-top-right">
@@ -116,7 +68,7 @@ class HomePage extends React.Component {
                             <h4>
                                 Have a question? Well, we’ve got some answers.
                         </h4>
-                            <button>
+                        <button>
                                 Go to Help Center
                         </button>
                         </div>
@@ -272,7 +224,7 @@ class HomePage extends React.Component {
         return (
             <div id="all-products">
                 <h2>
-                    All products
+                    <b>Popular right now</b>
                 </h2>
             </div>
         );
@@ -281,7 +233,7 @@ class HomePage extends React.Component {
     footer() {
         return (
             <footer className="footer" id="footer-dark">
-                <button aria-label="Update your settings United States English (US) $ (USD)" aria-controls="wt-locale-picker-overlay">
+                <button>
                     <span>
                         <span >
                             <svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
@@ -318,6 +270,20 @@ class HomePage extends React.Component {
                     </span >
                     &nbsp; United States &nbsp; | &nbsp; English(US) &nbsp; | &nbsp; $(USD)
                 </button >
+                <section className="footer-right footer-white">
+                    <div>
+                        Created by <a href="https://handolekim.com" target="_blank"><u>Han Dole Kim</u></a>
+                    </div>
+                    <a href="https://github.com/kimhandole/itsy" target="_blank">
+                        <FontAwesomeIcon icon={faGithub} size="2x" />
+                    </a>
+                    <a href="https://www.linkedin.com/in/han-dole-kim-76979996" target="_blank">
+                        <FontAwesomeIcon icon={faLinkedin} size="2x" />
+                    </a>
+                    <a href="https://angel.co/kimhandole" target="_blank">
+                        <FontAwesomeIcon icon={faAngellist} size="2x" />
+                    </a>
+                </section>
             </footer>
         );
     }
