@@ -10,6 +10,7 @@ class ShopShow extends React.Component {
     }
 
     componentDidMount() {
+        console.log(this.props, "@@@@@");
         this.props.fetchShop(this.props.shop.id);
     }
 

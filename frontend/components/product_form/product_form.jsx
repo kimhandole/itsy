@@ -28,8 +28,9 @@ class ProductForm extends React.Component {
         this.updatePrice = this.updatePrice.bind(this);
         this.updateQuantity = this.updateQuantity.bind(this);
 
-
         this.handleSubmit = this.handleSubmit.bind(this);
+
+        console.log(this.props, "props");
     }
 
     updateTitle() {

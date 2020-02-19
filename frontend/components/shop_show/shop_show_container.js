@@ -7,7 +7,8 @@ const mapStateToProps = (state, ownProps) => {
     return ({
         currentUser: state.session.currentUser,
         entities: state.entities,
-        shop: selectShop(state.entities.shops, ownProps.match.params.shopId)
+        shop: selectShop(state.entities.shops, ownProps.match.params.shopId),
+        shopId: ownProps.match.params.shopId
     });
 }
 
