@@ -1,5 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import { faGithub, faAngellist, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 class ProductForm extends React.Component {
     constructor(props) {
@@ -167,7 +169,7 @@ class ProductForm extends React.Component {
 
     renderPricing() {
         return (
-            <section className="product-form-photos">  
+            <section className="product-form-photos last-pricing">  
                 <p className="product-form-photos-title pricing">Inventory and pricing</p>
                 <section className="product-form-photos-descriptions">
                     <section className="product-form-photos-descriptions-text">
@@ -178,12 +180,33 @@ class ProductForm extends React.Component {
                     </section>
                     <div className="product-form-photos-descriptions-images-container">
                         <section className="product-form-photos-descriptions-images">
-                            
+                            <div className="product-form-price-container">
+                                <input type="number" className="product-form-detail-title-input price" min={1} placeholder="$" />
+                                <input type="number" className="product-form-detail-title-input quantity" min={1} defaultValue={1} required />
+                            </div>
                         </section>
                     </div>
                 </section>
 
             </section>
+        );
+    }
+
+    renderFooter() {
+        return (
+            <div className="footer-type-2-container">
+                <footer className="footer-type-2">
+                    <div>
+                        Created by Han Dole Kim.
+                    </div>
+                    <FontAwesomeIcon icon={faGithub} size="2x" />
+                    <FontAwesomeIcon icon={faLinkedin} size="2x" />
+                    <FontAwesomeIcon icon={faAngellist} size="2x" />
+                </footer>
+                <div className="empty-bottom">
+
+                </div>
+            </div>
         );
     }
 
@@ -195,6 +218,14 @@ class ProductForm extends React.Component {
                     {this.renderPhotos()}
                     {this.renderProductDetails()}
                     {this.renderPricing()}
+                    {this.renderFooter()}
+                </div>
+                <div className="product-form-bottom-nav">
+                    <div>
+                        <button className="cancel-btn">Cancel</button>
+                        <p><b>This listing isn't active yet. </b>It will be available to shoppers once you open your shop.</p>
+                    </div>
+                    <button className="save-and-continue-btn">Save and continue</button>
                 </div>
             </section>
         );

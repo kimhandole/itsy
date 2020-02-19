@@ -15,7 +15,6 @@ import ShopEditFormContainer from './shop_edit_form/shop_edit_container';
 import ShopShowContainer from './shop_show/shop_show_container';
 import ProductFormContainer from './product_form/product_form_container';
 import Footer from './footer/footer';
-
 const App = () => (
     <div id="app">
         <Modal />
@@ -39,7 +38,7 @@ const App = () => (
             <ProtectedRoute exact path="/products/new" component={ProductFormContainer} />
 
         </Switch>
-        <Footer />
+        {/* <Footer /> */}
     </div>
 );
 
