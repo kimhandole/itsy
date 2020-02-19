@@ -8,16 +8,95 @@ class ProductForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            type: "Physical"
+            title: "",
+            who: "",
+            what: "",
+            when: "",
+            type: "Physical",
+            description: "",
+            price: "",
+            quantity: "",
+            category: ""
         }
 
-        this.handleChange = this.handleChange.bind(this);
+        this.updateType = this.updateType.bind(this);
+        this.updateTitle = this.updateTitle.bind(this);
+        this.updateWho = this.updateWho.bind(this);
+        this.updateWhen = this.updateWhen.bind(this);
+        this.updateWhat = this.updateWhat.bind(this);
+        this.updateCategory = this.updateCategory.bind(this);
+        this.updatePrice = this.updatePrice.bind(this);
+        this.updateQuantity = this.updateQuantity.bind(this);
+
+
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    handleChange(event) {
+    updateTitle() {
+        return e => this.setState({
+            title: e.currentTarget.value
+        });
+    }
+
+    updateWho() {
+        return e => this.setState({
+            who: e.currentTarget.value
+        });
+    }
+
+    updateWhat() {
+        return e => this.setState({
+            what: e.currentTarget.value
+        });
+    }
+
+    updateWhen() {
+        return e => this.setState({
+            when: e.currentTarget.value
+        });
+    }
+
+    updateCategory() {
+        return e => this.setState({
+            category: e.currentTarget.value
+        });
+    }
+
+    updatePrice() {
+        return e => this.setState({
+            price: e.currentTarget.value
+        });
+    }
+
+    updateQuantity() {
+        return e => this.setState({
+            quantity: e.currentTarget.value
+        });
+    }
+
+    updateType(event) {
         this.setState({
             type: event.target.value
         });
+    }
+
+    handleSubmit(e) {
+        e.preventDefault();
+        const formData = new FormData();
+        formData.append('product[title]', this.state.title);
+        formData.append('product[type]', this.state.type);
+        formData.append('product[who]', this.state.who);
+        formData.append('product[what]', this.state.what);
+        formData.append('product[when]', this.state.when);
+        formData.append('product[description]', this.state.description);
+        formData.append('product[price]', this.state.price);
+        formData.append('product[quantity]', this.state.quantity);
+        formData.append('product[category]', this.state.category);
+
+
+        // formData.append('shop[owner_id]', this.props.currentUser)
+        this.props.createProduct(formData);
+        // this.props.history.push('/shops');
     }
 
     renderPhotos() {
@@ -114,9 +193,9 @@ class ProductForm extends React.Component {
                     </section>
                     <div className="product-form-photos-descriptions-images-container">
                         <section className="product-form-photos-descriptions-images">
-                            <input type="text" className="product-form-detail-title-input"/>
+                            <input type="text" className="product-form-detail-title-input" value={this.state.title} onChange={this.updateTitle()}/>
                             <div className="product-form-detail-about-container">
-                                <select className="product-form-detail-about-select product-description">
+                                <select className="product-form-detail-about-select product-description" onChange={this.updateWho()}>
                                     <option value="">Who made it?</option>
                                     <optgroup label="Select a maker">
                                         <option value="I did it">I did it</option>
@@ -126,7 +205,7 @@ class ProductForm extends React.Component {
 
                                 </select>
                                 
-                                <select className="product-form-detail-about-select middle-select product-description">
+                                <select className="product-form-detail-about-select middle-select product-description" onChange={this.updateWhat()}>
                                     <option value="">What is it?</option>
                                     <optgroup label="Select a use">
                                         <option value="A finished product">A finished product</option>
@@ -134,7 +213,7 @@ class ProductForm extends React.Component {
                                     </optgroup>
 
                                 </select>
-                                <select className="product-form-detail-about-select product-description">
+                                <select className="product-form-detail-about-select product-description" onChange={this.updateWhen()}>
                                     <option value="">When was it made?</option>
                                     <optgroup label="Not yet made">
                                         <option value="Made to order">Made to order</option>
@@ -164,7 +243,7 @@ class ProductForm extends React.Component {
                                 </select>
                             </div>
                             <div className="product-form-detail-about-container">
-                                <select className="product-form-detail-about-select product-description">
+                                <select className="product-form-detail-about-select product-description" onChange={this.updateCategory()}>
                                     <option value="">What describes it?</option>
                                     <optgroup label="Select a category">
                                         <option value="Jewelry">Jewelry</option>
@@ -189,7 +268,7 @@ class ProductForm extends React.Component {
                             <div className="product-form-detail-type-container">
                                 <div className="radio">
                                     <label>
-                                        <input type="radio" value="Physical" checked={this.state.type === "Physical"} onChange={this.handleChange}/>
+                                        <input type="radio" value="Physical" checked={this.state.type === "Physical"} onChange={this.updateType}/>
                                             &nbsp;&nbsp;&nbsp;Physical
                                     </label>
                                     <p>
@@ -198,7 +277,7 @@ class ProductForm extends React.Component {
                                 </div>
                                 <div className="radio">
                                     <label>
-                                        <input type="radio" value="Digital" checked={this.state.type === "Digital"} onChange={this.handleChange}/>
+                                        <input type="radio" value="Digital" checked={this.state.type === "Digital"} onChange={this.updateType}/>
                                             &nbsp;&nbsp;&nbsp;Digital
                                     </label>
                                     <p>
@@ -228,8 +307,8 @@ class ProductForm extends React.Component {
                     <div className="product-form-photos-descriptions-images-container">
                         <section className="product-form-photos-descriptions-images">
                             <div className="product-form-price-container">
-                                <input type="number" className="product-form-detail-title-input price" min={1} placeholder="$" />
-                                <input type="number" className="product-form-detail-title-input quantity" min={1} defaultValue={1} required />
+                                <input type="number" className="product-form-detail-title-input price" min={1} placeholder="$" value={this.state.price} onChange={this.updatePrice()}/>
+                                <input type="number" className="product-form-detail-title-input quantity" min={1} value={this.state.quantity} onChange={this.updateQuantity()} />
                             </div>
                         </section>
                     </div>
@@ -259,7 +338,7 @@ class ProductForm extends React.Component {
 
     render() {
         return (
-            <section className="product-form-container">
+            <form className="product-form-container" onSubmit={this.handleSubmit}>
                 <h1 className="product-form-container-title">Add a new listing</h1>
                 <div className="product-form-photos-container">
                     {this.renderPhotos()}
@@ -272,9 +351,11 @@ class ProductForm extends React.Component {
                         <button className="cancel-btn">Cancel</button>
                         <p><b>This listing isn't active yet. </b>It will be available to shoppers once you open your shop.</p>
                     </div>
-                    <button className="save-and-continue-btn">Save and continue</button>
+                    <div className="save-and-continue-btn">
+                        <input type="submit" value="Save and continue" />
+                    </div>
                 </div>
-            </section>
+            </form>
         );
     }
 }
