@@ -54,7 +54,7 @@
 
 .product-form-photos-descriptions-images-container {
     width: 75%;
-
+    
 }
 
 .product-form-photos-descriptions-images {
@@ -69,12 +69,24 @@
     height: 120px;
     background-color: #faf9f5;
     border-radius: 3px;
-    background-color: #FFF;
     border: 1px solid #E1E3DF;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 2px;
     margin-bottom: 18px;
     margin-left: 18px;
+}
+.product-form-photos-descriptions-image div {
+    margin-top: 4px;
+    width: 90px;
+    height: 90px;
+}
+
+.product-form-photos-descriptions-image p {
+    font-size: 12px;
+    margin-top: 6px;
+    color: #757575;
 }
 
 .product-form-photos-descriptions-text-title {
@@ -123,6 +135,7 @@
 
 .product-form-detail-title-input:focus {
     border-color: rgba(0, 0, 0, 0.8);;
+    outline: 0;
 }
 
 .product-form-detail-about-container {
@@ -298,4 +311,75 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+}
+
+#photo-1 {
+    background-image: url(https://www.etsy.com/images/seller-tools/add-photos-placeholders/placeholder-1.0000.svg);
+}
+
+#photo-2 {
+    background-image: url(https://www.etsy.com/images/seller-tools/add-photos-placeholders/placeholder-2.0000.svg);
+    
+}
+
+#photo-3 {
+    background-image: url(https://www.etsy.com/images/seller-tools/add-photos-placeholders/placeholder-3.0000.svg);
+    
+}
+
+#photo-4 {
+    background-image: url(https://www.etsy.com/images/seller-tools/add-photos-placeholders/placeholder-4.0000.svg);
+    
+}
+
+#photo-5 {
+    background-image: url(https://www.etsy.com/images/seller-tools/add-photos-placeholders/placeholder-5.0000.svg);
+    
+}
+
+#photo-6 {
+    background-image: url(https://www.etsy.com/images/seller-tools/add-photos-placeholders/placeholder-6.0000.svg);
+    
+}
+
+#photo-7 {
+    background-image: url(https://www.etsy.com/images/seller-tools/add-photos-placeholders/placeholder-7.0000.svg);
+    
+}
+
+#photo-8 {
+    background-image: url(https://www.etsy.com/images/seller-tools/add-photos-placeholders/placeholder-8.0000.svg);
+    
+}
+
+#photo-9 {
+    background-image: url(https://www.etsy.com/images/seller-tools/add-photos-placeholders/placeholder-9.0000.svg);
+    
+}
+
+.add-product {
+    background-color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#add-photo-input-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#add-photo-input {
+    display: none;
+}
+
+.product-description:hover {
+    border-color: #adaeaa;
+}
+
+.product-description:focus {
+    border-color: rgba(0, 0, 0, 0.8);
+    outline: 0;
 }

@@ -1,11 +1,23 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { faGithub, faAngellist, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faCamera } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 class ProductForm extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            type: "Physical"
+        }
+
+        this.handleChange = this.handleChange.bind(this);
+    }
+
+    handleChange(event) {
+        this.setState({
+            type: event.target.value
+        });
     }
 
     renderPhotos() {
@@ -27,16 +39,51 @@ class ProductForm extends React.Component {
                     </section>
                     <div className="product-form-photos-descriptions-images-container">
                         <section className="product-form-photos-descriptions-images">
-                            <div className="product-form-photos-descriptions-image"></div>
-                            <div className="product-form-photos-descriptions-image"></div>
-                            <div className="product-form-photos-descriptions-image"></div>
-                            <div className="product-form-photos-descriptions-image"></div>
-                            <div className="product-form-photos-descriptions-image"></div>
-                            <div className="product-form-photos-descriptions-image"></div>
-                            <div className="product-form-photos-descriptions-image"></div>
-                            <div className="product-form-photos-descriptions-image"></div>
-                            <div className="product-form-photos-descriptions-image"></div>
-                            <div className="product-form-photos-descriptions-image"></div>
+                            <div className="product-form-photos-descriptions-image add-product">
+                                <div id="add-photo-input-container">
+                                    <FontAwesomeIcon icon={faCamera} size="2x" />
+                                    <p>Add a photo</p>
+                                </div>
+                                <input id="add-photo-input" type="file">
+                                    
+                                </input>
+                            </div>
+                            <div className="product-form-photos-descriptions-image" >
+                                <div id="photo-1"></div>
+                                <p>Primary photo</p>
+                            </div>
+                            <div className="product-form-photos-descriptions-image">
+                                <div id="photo-2"></div>
+                                <p>Every angle</p>
+                            </div>
+                            <div className="product-form-photos-descriptions-image">
+                                <div id="photo-3"></div>
+                                <p>Every angle</p>
+                            </div>
+                            <div className="product-form-photos-descriptions-image">
+                                <div id="photo-4"></div>
+                                <p>Every angle</p>
+                            </div>
+                            <div className="product-form-photos-descriptions-image">
+                                <div id="photo-5"></div>
+                                <p>Details</p>
+                            </div>
+                            <div className="product-form-photos-descriptions-image">
+                                <div id="photo-6"></div>
+                                <p>In use</p>
+                            </div>
+                            <div className="product-form-photos-descriptions-image">
+                                <div id="photo-7"></div>
+                                <p>Size and scale</p>
+                            </div>
+                            <div className="product-form-photos-descriptions-image">
+                                <div id="photo-8"></div>
+                                <p>Styled scene</p>
+                            </div>
+                            <div className="product-form-photos-descriptions-image">
+                                <div id="photo-9"></div>
+                                <p>Variations</p>             
+                            </div>
                         </section>
                     </div>
                 </section>
@@ -69,7 +116,7 @@ class ProductForm extends React.Component {
                         <section className="product-form-photos-descriptions-images">
                             <input type="text" className="product-form-detail-title-input"/>
                             <div className="product-form-detail-about-container">
-                                <select className="product-form-detail-about-select">
+                                <select className="product-form-detail-about-select product-description">
                                     <option value="">Who made it?</option>
                                     <optgroup label="Select a maker">
                                         <option value="I did it">I did it</option>
@@ -79,7 +126,7 @@ class ProductForm extends React.Component {
 
                                 </select>
                                 
-                                <select className="product-form-detail-about-select middle-select">
+                                <select className="product-form-detail-about-select middle-select product-description">
                                     <option value="">What is it?</option>
                                     <optgroup label="Select a use">
                                         <option value="A finished product">A finished product</option>
@@ -87,7 +134,7 @@ class ProductForm extends React.Component {
                                     </optgroup>
 
                                 </select>
-                                <select className="product-form-detail-about-select">
+                                <select className="product-form-detail-about-select product-description">
                                     <option value="">When was it made?</option>
                                     <optgroup label="Not yet made">
                                         <option value="Made to order">Made to order</option>
@@ -117,7 +164,7 @@ class ProductForm extends React.Component {
                                 </select>
                             </div>
                             <div className="product-form-detail-about-container">
-                                <select className="product-form-detail-about-select">
+                                <select className="product-form-detail-about-select product-description">
                                     <option value="">What describes it?</option>
                                     <optgroup label="Select a category">
                                         <option value="Jewelry">Jewelry</option>
@@ -142,7 +189,7 @@ class ProductForm extends React.Component {
                             <div className="product-form-detail-type-container">
                                 <div className="radio">
                                     <label>
-                                        <input type="radio" value="Physical" defaultChecked/>
+                                        <input type="radio" value="Physical" checked={this.state.type === "Physical"} onChange={this.handleChange}/>
                                             &nbsp;&nbsp;&nbsp;Physical
                                     </label>
                                     <p>
@@ -151,7 +198,7 @@ class ProductForm extends React.Component {
                                 </div>
                                 <div className="radio">
                                     <label>
-                                        <input type="radio" value="Digital" />
+                                        <input type="radio" value="Digital" checked={this.state.type === "Digital"} onChange={this.handleChange}/>
                                             &nbsp;&nbsp;&nbsp;Digital
                                     </label>
                                     <p>
@@ -159,7 +206,7 @@ class ProductForm extends React.Component {
                                     </p>
                                 </div>
                             </div>
-                            <textarea className="product-form-detail-description-container" rows="16" data-field="description"/>
+                            <textarea className="product-form-detail-description-container product-description" rows="16" data-field="description"/>
                         </section>
                     </div>
                 </section>
