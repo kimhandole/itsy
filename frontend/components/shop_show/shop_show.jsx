@@ -68,7 +68,7 @@ class ShopShow extends React.Component {
             <div className="shop-show-products-container">
                 <p>Products</p>
                 <div className="shop-show-products">
-
+                    
                 </div>
             </div>
         );
