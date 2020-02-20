@@ -373,6 +373,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 #add-photo-input {
@@ -391,6 +392,7 @@
 .product-index {
     display: flex;
     flex-wrap: wrap;
+    font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
 }
 
 .product-index-item {
@@ -401,15 +403,15 @@
 .product-index-item div {
     width: 163px;
     height: 130px;
-    background-color: red;
+    background-color: orange;
     border-radius: 2px;
 }
 
-.product-index-item p:first-child {
+.product-index-item-title {
     font-size: 14px;
 }
 
-.product-index-item p:last-child {
+.product-index-item-price {
     font-size: 16px;
     font-weight: 500;
 }

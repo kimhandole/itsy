@@ -16,7 +16,8 @@ class ProductForm extends React.Component {
             description: "",
             price: "",
             quantity: "",
-            category: ""
+            category: "",
+            photoFile: null
         }
 
         this.updateType = this.updateType.bind(this);
@@ -31,6 +32,8 @@ class ProductForm extends React.Component {
 
 
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleAddPhoto = this.handleAddPhoto.bind(this);
+        this.handleFile = this.handleFile.bind(this);
     }
 
     componentDidMount() {
@@ -109,11 +112,24 @@ class ProductForm extends React.Component {
         formData.append('product[price]', this.state.price);
         formData.append('product[quantity]', this.state.quantity);
         formData.append('product[category_id]', this.state.category);
-        formData.append('product[shop_id]', this.props.shopId)
+        formData.append('product[shop_id]', this.props.shopId);
+        formData.append('product[photo]', this.state.photoFile);
 
         // formData.append('shop[owner_id]', this.props.currentUser)
         this.props.createProduct(formData);
         this.props.history.push(`/shops/${this.props.shopId}`);
+    }
+    
+    handleAddPhoto(e) {
+        e.preventDefault();
+        const fileInput = document.getElementById("add-photo-input");
+        fileInput.click();
+    }
+
+    handleFile(e) {
+        this.setState({
+            photoFile: e.currentTarget.files[0]
+        });
     }
 
     renderPhotos() {
@@ -136,11 +152,11 @@ class ProductForm extends React.Component {
                     <div className="product-form-photos-descriptions-images-container">
                         <section className="product-form-photos-descriptions-images">
                             <div className="product-form-photos-descriptions-image add-product">
-                                <div id="add-photo-input-container">
+                                <div id="add-photo-input-container" onClick={this.handleAddPhoto}>
                                     <FontAwesomeIcon icon={faCamera} size="2x" />
                                     <p>Add a photo</p>
                                 </div>
-                                <input id="add-photo-input" type="file">
+                                <input id="add-photo-input" type="file" onChange={this.handleFile}>
                                     
                                 </input>
                             </div>
