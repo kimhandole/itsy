@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import ProductIndexContainer from '../product/product_index_container'
 
 class ShopShow extends React.Component {
     constructor(props) {
@@ -9,8 +10,7 @@ class ShopShow extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchShop(this.props.shop.id);
-        this.props.fetchProducts(this.props.shopId);
+        // this.props.fetchShop(this.props.shop.id);
     }
 
     handleAddProduct() {
@@ -67,9 +67,7 @@ class ShopShow extends React.Component {
         return (
             <div className="shop-show-products-container">
                 <p>Products</p>
-                <div className="shop-show-products">
-                    
-                </div>
+                <ProductIndexContainer shopId={this.props.shopId} />
             </div>
         );
     }

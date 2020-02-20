@@ -387,3 +387,29 @@
     border-color: rgba(0, 0, 0, 0.8);
     outline: 0;
 }
+
+.product-index {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product-index-item {
+    margin-right: 12px;
+    margin-bottom: 12px;
+}
+
+.product-index-item div {
+    width: 242px;
+    height: 192px;
+    background-color: red;
+    border-radius: 2px;
+}
+
+.product-index-item p:first-child {
+    font-size: 14px;
+}
+
+.product-index-item p:last-child {
+    font-size: 16px;
+    font-weight: 500;
+}

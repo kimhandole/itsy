@@ -99,12 +99,13 @@
 .shop-show-products-container {
     display: flex;
     flex-direction: column;
-    margin-bottom: 300px;
+    margin-bottom: 12px;
 }
 
-.shop-show-products-container p {
+.shop-show-products-container > p {
     font-weight: 600;
     font-size: 20px;
+    margin-bottom: 12px;
 }
 
 .shop-policies {

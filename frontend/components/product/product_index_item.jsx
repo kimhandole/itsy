@@ -8,7 +8,11 @@ class ProductIndexItem extends React.Component {
     render() {
         return (
             <section className="product-index-item">
+                <div>
 
+                </div>
+                <p>{this.props.product.title}</p>
+                <p>${this.props.product.price}</p>
             </section>
         );
     }

@@ -1,7 +1,5 @@
 import { connect } from 'react-redux';
 import { fetchShop } from '../../actions/shop_actions';
-import { fetchProducts } from '../../actions/product_actions';
-
 import { selectShop } from '../../reducers/selectors';
 import ShopShow from './shop_show';
 
@@ -15,8 +13,7 @@ const mapStateToProps = (state, ownProps) => {
 }
 
 const mapDispatchToProps = dispatch => ({
-    fetchShop: id => dispatch(fetchShop(id)),
-    fetchProducts: (shop_id) => dispatch(fetchProducts(shop_id))
+    fetchShop: id => dispatch(fetchShop(id))
 });
 
 export default connect(
