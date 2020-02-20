@@ -368,6 +368,11 @@
     align-items: center;
 }
 
+.add-product:hover {
+    border-color: #ffbca2;
+}
+
+
 #add-photo-input-container {
     display: flex;
     flex-direction: column;
@@ -414,4 +419,17 @@
 .product-index-item-price {
     font-size: 16px;
     font-weight: 500;
+}
+
+.preview {
+    width: auto;
+    height: auto;
+    max-width: 120px;
+    max-height: 120px;
+}
+
+.preview-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

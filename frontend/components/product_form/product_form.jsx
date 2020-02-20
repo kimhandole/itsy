@@ -17,7 +17,8 @@ class ProductForm extends React.Component {
             price: "",
             quantity: "",
             category: "",
-            photoFile: null
+            photoFile: null,
+            photoUrl: null
         }
 
         this.updateType = this.updateType.bind(this);
@@ -127,9 +128,27 @@ class ProductForm extends React.Component {
     }
 
     handleFile(e) {
-        this.setState({
-            photoFile: e.currentTarget.files[0]
-        });
+        const file = e.currentTarget.files[0];
+        const fileReader = new FileReader();
+        fileReader.onloadend = () => {
+            this.setState({
+                photoFile: file,
+                photoUrl: fileReader.result
+            });
+        }
+        if (file) {
+            fileReader.readAsDataURL(file);
+        }
+    }
+
+    renderPreview() {
+        if (this.state.photoUrl) {
+            return (
+                <div className="product-form-photos-descriptions-image preview-image" >
+                    <img src={this.state.photoUrl} alt="preview" className="preview" />
+                </div>
+            );
+        } 
     }
 
     renderPhotos() {
@@ -151,13 +170,14 @@ class ProductForm extends React.Component {
                     </section>
                     <div className="product-form-photos-descriptions-images-container">
                         <section className="product-form-photos-descriptions-images">
+                            {this.renderPreview()}
                             <div className="product-form-photos-descriptions-image add-product">
                                 <div id="add-photo-input-container" onClick={this.handleAddPhoto}>
                                     <FontAwesomeIcon icon={faCamera} size="2x" />
                                     <p>Add a photo</p>
                                 </div>
                                 <input id="add-photo-input" type="file" onChange={this.handleFile}>
-                                    
+
                                 </input>
                             </div>
                             <div className="product-form-photos-descriptions-image" >

@@ -111,8 +111,8 @@ class HomePage extends React.Component {
                                 </span>
                             </p>
                         </div>
-                        <picture>
-                            <img id="left-content-img" src="https://i.etsystatic.com/ij/da9850/2128014396/ij_halfxhalf.2128014396_26rtgqsy.jpg?version=0" srcSet="https://i.etsystatic.com/ij/da9850/2128014396/ij_halfxhalf.2128014396_26rtgqsy.jpg?version=0 1x, https://i.etsystatic.com/ij/da9850/2128014396/ij_fullxfull.2128014396_26rtgqsy.jpg?version=0 2x" alt="" aria-hidden="true" role="presentation" />
+                        <picture className="picture">
+                            <img className="left-content-img" src="https://i.etsystatic.com/ij/da9850/2128014396/ij_halfxhalf.2128014396_26rtgqsy.jpg?version=0" srcSet="https://i.etsystatic.com/ij/da9850/2128014396/ij_halfxhalf.2128014396_26rtgqsy.jpg?version=0 1x, https://i.etsystatic.com/ij/da9850/2128014396/ij_fullxfull.2128014396_26rtgqsy.jpg?version=0 2x" alt="" aria-hidden="true" role="presentation" />
                         </picture>
                     </div>
 
@@ -137,7 +137,7 @@ class HomePage extends React.Component {
                                 </p>
                             </div>
                             <picture className="right-banner-picture">
-                                <source srcSet="https://i.etsystatic.com/ij/08d5d6/2127946540/ij_halfxhalf.2127946540_evkun514.jpg?version=0 1x, https://i.etsystatic.com/ij/08d5d6/2127946540/ij_fullxfull.2127946540_evkun514.jpg?version=0 2x" media="(max-width: 899px)">
+                                <source srcSet="https://i.etsystatic.com/ij/08d5d6/2127946540/ij_halfxhalf.2127946540_evkun514.jpg?version=0 1x, https://i.etsystatic.com/ij/08d5d6/2127946540/ij_fullxfull.2127946540_evkun514.jpg?version=0 2x" >
                                 </source>
                                 <img src="https://i.etsystatic.com/ij/eb4705/2127948056/ij_halfxhalf.2127948056_1tka5hfv.jpg?version=0" srcSet="https://i.etsystatic.com/ij/eb4705/2127948056/ij_halfxhalf.2127948056_1tka5hfv.jpg?version=0 1x, https://i.etsystatic.com/ij/eb4705/2127948056/ij_fullxfull.2127948056_1tka5hfv.jpg?version=0 2x" className="" alt="" aria-hidden="true" role="presentation" >
                                 </img>
