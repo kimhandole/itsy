@@ -1,7 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 
-
 class ShopShow extends React.Component {
     constructor(props) {
         super(props);
@@ -11,6 +10,7 @@ class ShopShow extends React.Component {
 
     componentDidMount() {
         this.props.fetchShop(this.props.shop.id);
+        this.props.fetchProducts(this.props.shopId);
     }
 
     handleAddProduct() {

@@ -6,7 +6,6 @@ import {
 
 import { LOGOUT_CURRENT_USER } from '../actions/session_actions';
 
-
 const shopsReducer = (state = {}, action) => {
     Object.freeze(state)
 

@@ -11,6 +11,8 @@ class HomePage extends React.Component {
         const elements = document.getElementsByClassName("footer");
         const footer = elements[0];
         footer.classList.add(".footer-dark");
+
+        this.props.fetchAllProducts();
     }
 
     semiFooter() {
@@ -26,7 +28,7 @@ class HomePage extends React.Component {
                                 What is Itsy?
                         </h2>
                         <a href="https://github.com/kimhandole/itsy" target="_blank">
-                            Read our wonderfully weird story
+                            Read our wonderfully weird readme
                         </a>
                         </div>
                         <div className="semi-footer-top-right">
@@ -67,9 +69,9 @@ class HomePage extends React.Component {
                             <h4>
                                 Have a question? Well, we’ve got some answers.
                         </h4>
-                        <button>
-                                Go to Help Center
-                        </button>
+                        <a href="mailto:kimhandole@gmail.com" target="_blank">
+                            Email to Creator
+                        </a>
                         </div>
                         <div className="semi-footer-bot-right">
 

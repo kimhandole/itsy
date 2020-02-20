@@ -176,7 +176,7 @@ class ProductForm extends React.Component {
                                 <div id="photo-8"></div>
                                 <p>Styled scene</p>
                             </div>
-                            <div className="product-form-photos-descriptions-image">
+                            <div className="product-form-photos-descriptions-image last-photo">
                                 <div id="photo-9"></div>
                                 <p>Variations</p>             
                             </div>

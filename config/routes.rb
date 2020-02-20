@@ -9,7 +9,9 @@ Rails.application.routes.draw do
 
     get "owner/:owner_id/shops", to: "shops#index"
 
-    resources :products, only: [:show, :update, :destroy, :index]
+    resources :products, only: [:show, :update, :destroy]
+    
+    get "products", to: "products#all"
   end
 
   root "static_pages#root"  

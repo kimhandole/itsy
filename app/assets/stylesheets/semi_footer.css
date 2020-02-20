@@ -103,7 +103,7 @@
     margin: 0px;
 }
 
-.semi-footer-bot-mid button {
+.semi-footer-bot-mid a {
     font-size: 16px;
     margin: 12px 0px 0px;
     padding: 12px 18px;
@@ -115,7 +115,7 @@
     transition: transform 200ms cubic-bezier(0.345, 0.115, 0.135, 1.42),opacity 150ms ease-out;
 }
 
-.semi-footer-bot-mid button:hover {
+.semi-footer-bot-mid a:hover {
     box-shadow: 0 4px 20px rgba(34, 34, 34, 0.15);
     border-width: 3px;
     padding: 11px 18px;

@@ -1,4 +1,16 @@
 class Api::ProductsController < ApplicationController
+    def all
+        @products = Product.all
+
+        render :index
+    end
+
+    def index
+        @products = Product.where(:shop_id => params[:shop_id])
+        
+        render :index
+    end
+
     def create
         @product = Product.new(product_params)
 
