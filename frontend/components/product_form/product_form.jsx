@@ -12,7 +12,7 @@ class ProductForm extends React.Component {
             who: "",
             what: "",
             when: "",
-            type: "Physical",
+            productType: "physical",
             description: "",
             price: "",
             quantity: "",
@@ -27,10 +27,10 @@ class ProductForm extends React.Component {
         this.updateCategory = this.updateCategory.bind(this);
         this.updatePrice = this.updatePrice.bind(this);
         this.updateQuantity = this.updateQuantity.bind(this);
+        this.updateDescription = this.updateDescription.bind(this);
+
 
         this.handleSubmit = this.handleSubmit.bind(this);
-
-        console.log(this.props, "props");
     }
 
     componentDidMount() {
@@ -85,9 +85,15 @@ class ProductForm extends React.Component {
         });
     }
 
-    updateType(event) {
-        this.setState({
-            type: event.target.value
+    updateDescription() {
+        return e => this.setState({
+            description: e.currentTarget.value
+        });
+    }
+
+    updateType() {
+        return e => this.setState({
+            productType: e.currentTarget.value
         });
     }
 
@@ -95,19 +101,19 @@ class ProductForm extends React.Component {
         e.preventDefault();
         const formData = new FormData();
         formData.append('product[title]', this.state.title);
-        formData.append('product[type]', this.state.type);
+        formData.append('product[product_type]', this.state.productType);
         formData.append('product[who]', this.state.who);
         formData.append('product[what]', this.state.what);
         formData.append('product[when]', this.state.when);
         formData.append('product[description]', this.state.description);
         formData.append('product[price]', this.state.price);
         formData.append('product[quantity]', this.state.quantity);
-        formData.append('product[category]', this.state.category);
-
+        formData.append('product[category_id]', this.state.category);
+        formData.append('product[shop_id]', this.props.shopId)
 
         // formData.append('shop[owner_id]', this.props.currentUser)
         this.props.createProduct(formData);
-        // this.props.history.push('/shops');
+        this.props.history.push(`/shops/${this.props.shopId}`);
     }
 
     renderPhotos() {
@@ -257,29 +263,29 @@ class ProductForm extends React.Component {
                                 <select className="product-form-detail-about-select product-description" onChange={this.updateCategory()}>
                                     <option value="">What describes it?</option>
                                     <optgroup label="Select a category">
-                                        <option value="Jewelry">Jewelry</option>
-                                        <option value="Accessories">Accessories</option>
-                                        <option value="Clothing">Clothing</option>
-                                        <option value="Shoes">Shoes</option>
-                                        <option value="Home">Home</option>
-                                        <option value="Living">Living</option>
-                                        <option value="Wedding">Wedding</option>
-                                        <option value="Party">Party</option>
-                                        <option value="Toys">Toys</option>
-                                        <option value="Entertainment">Entertainment</option>
-                                        <option value="Art">Art</option>
-                                        <option value="Collectibles">Collectibles</option>
-                                        <option value="Craft">Craft</option>
-                                        <option value="Supplies">Supplies</option>
-                                        <option value="Vintage">Vintage</option>
-                                        <option value="Gifts">Gifts</option>
+                                        <option value="1">Jewelry</option>
+                                        <option value="2">Accessories</option>
+                                        <option value="3">Clothing</option>
+                                        <option value="4">Shoes</option>
+                                        <option value="5">Home</option>
+                                        <option value="6">Living</option>
+                                        <option value="7">Wedding</option>
+                                        <option value="8">Party</option>
+                                        <option value="9">Toys</option>
+                                        <option value="10">Entertainment</option>
+                                        <option value="11">Art</option>
+                                        <option value="12">Collectibles</option>
+                                        <option value="13">Craft</option>
+                                        <option value="14">Supplies</option>
+                                        <option value="15">Vintage</option>
+                                        <option value="16">Gifts</option>
                                     </optgroup>
                                 </select>
                             </div>
                             <div className="product-form-detail-type-container">
                                 <div className="radio">
                                     <label>
-                                        <input type="radio" value="Physical" checked={this.state.type === "Physical"} onChange={this.updateType}/>
+                                        <input type="radio" value="physical" checked={this.state.productType === "physical"} onChange={this.updateType()} />
                                             &nbsp;&nbsp;&nbsp;Physical
                                     </label>
                                     <p>
@@ -288,7 +294,7 @@ class ProductForm extends React.Component {
                                 </div>
                                 <div className="radio">
                                     <label>
-                                        <input type="radio" value="Digital" checked={this.state.type === "Digital"} onChange={this.updateType}/>
+                                        <input type="radio" value="digital" checked={this.state.productType === "digital"} onChange={this.updateType()}/>
                                             &nbsp;&nbsp;&nbsp;Digital
                                     </label>
                                     <p>
@@ -296,7 +302,7 @@ class ProductForm extends React.Component {
                                     </p>
                                 </div>
                             </div>
-                            <textarea className="product-form-detail-description-container product-description" rows="16" data-field="description"/>
+                            <textarea className="product-form-detail-description-container product-description" rows="16" data-field="description" onChange={this.updateDescription()}/>
                         </section>
                     </div>
                 </section>

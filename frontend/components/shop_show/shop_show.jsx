@@ -10,12 +10,11 @@ class ShopShow extends React.Component {
     }
 
     componentDidMount() {
-        console.log(this.props, "@@@@@");
         this.props.fetchShop(this.props.shop.id);
     }
 
     handleAddProduct() {
-        this.props.history.push('/products/new');
+        this.props.history.push(`${this.props.shopId}/products/new`);
     }
 
     shopInfo() {

@@ -35,7 +35,7 @@ const App = () => (
             <ProtectedRoute exact path="/shops/:shopId/edit" component={ShopEditFormContainer} />
             <ProtectedRoute exact path='/shops/:shopId' component={ShopShowContainer} />
 
-            <ProtectedRoute exact path="/products/new" component={ProductFormContainer} />
+            <ProtectedRoute exact path="/shops/:shopId/products/new" component={ProductFormContainer} />
 
         </Switch>
         <Footer />

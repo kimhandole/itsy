@@ -45,8 +45,13 @@ ActiveRecord::Schema.define(version: 2020_01_12_031609) do
 
   create_table "products", force: :cascade do |t|
     t.string "title", null: false
+    t.string "product_type", null: false
+    t.string "who", null: false
+    t.string "what", null: false
+    t.string "when", null: false
     t.text "description", null: false
     t.decimal "price", precision: 15, scale: 2, null: false
+    t.integer "quantity", null: false
     t.integer "shop_id", null: false
     t.integer "category_id", null: false
     t.integer "cart_id"
@@ -56,8 +61,12 @@ ActiveRecord::Schema.define(version: 2020_01_12_031609) do
     t.index ["cart_id"], name: "index_products_on_cart_id"
     t.index ["category_id"], name: "index_products_on_category_id"
     t.index ["description"], name: "index_products_on_description"
+    t.index ["product_type"], name: "index_products_on_product_type"
     t.index ["shop_id"], name: "index_products_on_shop_id"
     t.index ["title"], name: "index_products_on_title"
+    t.index ["what"], name: "index_products_on_what"
+    t.index ["when"], name: "index_products_on_when"
+    t.index ["who"], name: "index_products_on_who"
   end
 
   create_table "shops", force: :cascade do |t|
