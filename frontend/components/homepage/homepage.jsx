@@ -1,6 +1,7 @@
 import React from 'react';
 import { faGithub, faAngellist, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import ProductIndexContainer from '../product/product_index_container';
 
 class HomePage extends React.Component {
     constructor(props) {
@@ -227,6 +228,7 @@ class HomePage extends React.Component {
                 <h2>
                     <b>Popular right now</b>
                 </h2>
+                <ProductIndexContainer fetchAll={true} />
             </div>
         );
     }

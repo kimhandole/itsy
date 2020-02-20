@@ -67,7 +67,7 @@ class ShopShow extends React.Component {
         return (
             <div className="shop-show-products-container">
                 <p>Products</p>
-                <ProductIndexContainer shopId={this.props.shopId} />
+                <ProductIndexContainer shopId={this.props.shopId} fetchAll={false} />
             </div>
         );
     }

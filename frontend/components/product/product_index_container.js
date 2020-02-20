@@ -1,18 +1,20 @@
 import { connect } from 'react-redux';
 import ProductIndex from './product_index';
-import { fetchProducts } from '../../actions/product_actions';
+import { fetchProducts, fetchAllProducts } from '../../actions/product_actions';
 
 
 const mapStateToProps = (state, ownProps) => {
     return ({
         currentUser: state.session.currentUser,
         entities: state.entities,
-        shopId: ownProps.shopId
+        shopId: ownProps.shopId,
+        fetchAll: ownProps.fetchAll
     });
 }
 
 const mapDispatchToProps = dispatch => ({
-    fetchProducts: (shop_id) => dispatch(fetchProducts(shop_id))
+    fetchProducts: (shop_id) => dispatch(fetchProducts(shop_id)),
+    fetchAllProducts: () => dispatch(fetchAllProducts())
 });
 
 export default connect(

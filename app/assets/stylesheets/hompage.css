@@ -95,6 +95,7 @@
     font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
     font-size: 26px;
     text-align: center;
+    margin-bottom: 30px;
 }
 
 #banner-text-container {
@@ -140,7 +141,7 @@
 }
 
 #banner-text-container {
-    margin-bottom: 36px;
+    margin-bottom: 12px;
 }
 
 #right-content {
