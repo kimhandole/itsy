@@ -6,7 +6,6 @@ class ProductIndexItem extends React.Component {
     }
 
     render() {
-        console.log(this.props.product, "phto");
         return (
             <section className="product-index-item">
                 <img src={this.props.product.photoUrl} alt={this.props.product.title}>

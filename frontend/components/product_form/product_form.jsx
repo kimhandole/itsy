@@ -15,7 +15,7 @@ class ProductForm extends React.Component {
             productType: "physical",
             description: "",
             price: "",
-            quantity: "",
+            quantity: "1",
             category: "",
             photoFile: null,
             photoUrl: null
@@ -114,9 +114,10 @@ class ProductForm extends React.Component {
         formData.append('product[quantity]', this.state.quantity);
         formData.append('product[category_id]', this.state.category);
         formData.append('product[shop_id]', this.props.shopId);
-        formData.append('product[photo]', this.state.photoFile);
+        if (this.props.photoFile) {
+            formData.append('product[photo]', this.state.photoFile);
+        }
 
-        // formData.append('shop[owner_id]', this.props.currentUser)
         this.props.createProduct(formData);
         this.props.history.push(`/shops/${this.props.shopId}`);
     }
@@ -246,9 +247,9 @@ class ProductForm extends React.Component {
                     </section>
                     <div className="product-form-photos-descriptions-images-container">
                         <section className="product-form-photos-descriptions-images">
-                            <input type="text" className="product-form-detail-title-input" value={this.state.title} onChange={this.updateTitle()}/>
+                            <input type="text" className="product-form-detail-title-input" value={this.state.title} onChange={this.updateTitle()} required/>
                             <div className="product-form-detail-about-container">
-                                <select className="product-form-detail-about-select product-description" onChange={this.updateWho()}>
+                                <select className="product-form-detail-about-select product-description" onChange={this.updateWho()} required>
                                     <option value="">Who made it?</option>
                                     <optgroup label="Select a maker">
                                         <option value="I did it">I did it</option>
@@ -258,7 +259,7 @@ class ProductForm extends React.Component {
 
                                 </select>
                                 
-                                <select className="product-form-detail-about-select middle-select product-description" onChange={this.updateWhat()}>
+                                <select className="product-form-detail-about-select middle-select product-description" onChange={this.updateWhat()} required>
                                     <option value="">What is it?</option>
                                     <optgroup label="Select a use">
                                         <option value="A finished product">A finished product</option>
@@ -266,7 +267,7 @@ class ProductForm extends React.Component {
                                     </optgroup>
 
                                 </select>
-                                <select className="product-form-detail-about-select product-description" onChange={this.updateWhen()}>
+                                <select className="product-form-detail-about-select product-description" onChange={this.updateWhen()} required>
                                     <option value="">When was it made?</option>
                                     <optgroup label="Not yet made">
                                         <option value="Made to order">Made to order</option>
@@ -296,7 +297,7 @@ class ProductForm extends React.Component {
                                 </select>
                             </div>
                             <div className="product-form-detail-about-container">
-                                <select className="product-form-detail-about-select product-description" onChange={this.updateCategory()}>
+                                <select className="product-form-detail-about-select product-description" onChange={this.updateCategory()} required>
                                     <option value="">What describes it?</option>
                                     <optgroup label="Select a category">
                                         <option value="1">Jewelry</option>
@@ -338,7 +339,7 @@ class ProductForm extends React.Component {
                                     </p>
                                 </div>
                             </div>
-                            <textarea className="product-form-detail-description-container product-description" rows="16" data-field="description" onChange={this.updateDescription()}/>
+                            <textarea className="product-form-detail-description-container product-description" rows="16" data-field="description" onChange={this.updateDescription()} required />
                         </section>
                     </div>
                 </section>
@@ -360,13 +361,12 @@ class ProductForm extends React.Component {
                     <div className="product-form-photos-descriptions-images-container">
                         <section className="product-form-photos-descriptions-images">
                             <div className="product-form-price-container">
-                                <input type="number" className="product-form-detail-title-input price" min={1} placeholder="$" value={this.state.price} onChange={this.updatePrice()}/>
-                                <input type="number" className="product-form-detail-title-input quantity" min={1} value={this.state.quantity} onChange={this.updateQuantity()} />
+                                <input type="number" className="product-form-detail-title-input price" min={1} placeholder="$" value={this.state.price} onChange={this.updatePrice()} step=".01" required/>
+                                <input type="number" className="product-form-detail-title-input quantity" min={1} value={this.state.quantity} onChange={this.updateQuantity()} required/>
                             </div>
                         </section>
                     </div>
                 </section>
-
             </section>
         );
     }
