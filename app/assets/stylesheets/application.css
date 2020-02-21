@@ -20,6 +20,7 @@
  *= require semi_footer.css
  *= require shop_show.css
  *= require product.css
+ *= require category.css
  *= require_tree .
  *= require_self
  */

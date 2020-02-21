@@ -9,10 +9,7 @@ class ShopIndex extends Component {
     }
 
     componentDidMount() {
-        if (this.props.shops.length === 0) {
-            this.props.fetchShops(this.props.currentUser);
-        }
-        
+        this.props.fetchShops(this.props.currentUser);
     }
 
     handleAddShop() {

@@ -1,0 +1,16 @@
+.category-show-header {
+    padding: 12px 36px 24px 36px;
+}
+
+.category-link {
+    text-decoration: underline;
+    transition: opacity 200ms ease-out;
+    color: #595959 ;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.category-link:hover {
+    opacity: 0.5;
+}
