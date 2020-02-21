@@ -11,6 +11,12 @@ class Api::ProductsController < ApplicationController
         render :index
     end
 
+    def category
+        @products = Product.where(:category_id => params[:category_id])
+
+        render :index
+    end
+
     def create
         @product = Product.new(product_params)
 

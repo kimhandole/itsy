@@ -11,9 +11,9 @@ class CategoryShow extends React.Component {
     }
 
     componentDidMount() {
-    }
-
-    componentDidUpdate() {
+    //     this.props.fetchCategory(this.props.match.params.categoryId);
+    //     this.props.fetchShops();
+    //     this.props.fetchProducts();
     }
 
     getCategory(categoryId) {
@@ -50,11 +50,6 @@ class CategoryShow extends React.Component {
         }
     }
 
-    // componentDidMount() {
-    //     this.props.fetchCategory(this.props.match.params.categoryId);
-    //     this.props.fetchShops();
-    //     this.props.fetchProducts();
-    // }
 
     // componentDidUpdate(prevProps) {
     //     if (this.props.match.params.categoryId !== prevProps.match.params.categoryId){
@@ -115,6 +110,7 @@ class CategoryShow extends React.Component {
                         {this.getCategory(this.props.categoryId)}
                     </a>
                 </p>
+                <h1 className="category-title">{this.getCategory(this.props.categoryId)}</h1>
                 <Footer isDark={true} />
             </section>
         )
