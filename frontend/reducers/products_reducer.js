@@ -25,10 +25,7 @@ const productsReducer = (state = {}, action) => {
             const newState = Object.assign({}, state);
             delete newState[action.id];
             return newState;
-
-        case LOGOUT_CURRENT_USER:
-            return {};
-
+            
         default:
             return state;
     }

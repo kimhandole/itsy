@@ -35,6 +35,7 @@ class ProductForm extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleAddPhoto = this.handleAddPhoto.bind(this);
         this.handleFile = this.handleFile.bind(this);
+        this.handleCancel = this.handleCancel.bind(this);
     }
 
     componentDidMount() {
@@ -139,6 +140,11 @@ class ProductForm extends React.Component {
         if (file) {
             fileReader.readAsDataURL(file);
         }
+    }
+
+    handleCancel(e) {
+        e.preventDefault();
+        this.props.history.goBack();
     }
 
     renderPreview() {
@@ -407,7 +413,7 @@ class ProductForm extends React.Component {
                 </div>
                 <div className="product-form-bottom-nav">
                     <div>
-                        <button className="cancel-btn">Cancel</button>
+                        <button className="cancel-btn" onClick={this.handleCancel}>Cancel</button>
                         <p><b>This listing isn't active yet. </b>It will be available to shoppers once you open your shop.</p>
                     </div>
                     <div className="save-and-continue-btn">

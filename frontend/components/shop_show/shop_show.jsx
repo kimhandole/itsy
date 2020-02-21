@@ -1,16 +1,25 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import LoadingIcon from '../loading/loading_icon';
 import ProductIndexContainer from '../product/product_index_container'
 
 class ShopShow extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            shop: null
+        }
 
         this.handleAddProduct = this.handleAddProduct.bind(this);
     }
 
     componentDidMount() {
-        // this.props.fetchShop(this.props.shop.id);
+        this.props.fetchShop(this.props.shopId).then(
+            shop => this.setState({
+                shop: shop
+            })
+        );
+        
     }
 
     handleAddProduct() {
@@ -32,7 +41,7 @@ class ShopShow extends React.Component {
                 </div>
                 <div className="shop-show-title-buttons">
                     <div className="shop-show-title">
-                        {this.props.shop.title}
+                        {this.state.shop.title}
                     </div>
                     <div className="shop-show-buttons">
                         <button className="shop-show-add-product" onClick={this.handleAddProduct}>Add product</button>
@@ -176,6 +185,9 @@ class ShopShow extends React.Component {
     }
 
     render() {
+        if (this.state.shop === null) {
+            return <LoadingIcon />
+        }
         return (
             <div className="shop-show">
                 {this.shopAndOwnerInfo()}

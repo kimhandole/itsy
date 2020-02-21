@@ -12,10 +12,10 @@ export const receiveShops = shops => ({
     shops,
 });
 
-export const receiveShop = ({ shop, owner }) => ({
+export const receiveShop = ({ shop }) => ({
     type: RECEIVE_SHOP,
-    shop,
-    owner,
+    shop
+    // owner,
 });
 
 export const receiveShopsErrors = errors => ({

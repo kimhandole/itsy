@@ -18,6 +18,10 @@ class HomePage extends React.Component {
         this.props.fetchAllProducts();
     }
 
+    componentDidUpdate() {
+        this.props.fetchAllProducts();
+    }
+
     semiFooter() {
         return (
             <div className="semi-footer">

@@ -1,7 +1,6 @@
 import React from 'react';
 import LoadingIcon from '../loading/loading_icon';
 
-
 class ProductIndexItem extends React.Component {
     constructor(props) {
         super(props);
