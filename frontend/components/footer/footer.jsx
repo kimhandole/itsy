@@ -2,9 +2,9 @@ import React from 'react';
 import { faGithub, faAngellist, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const Footer = () => {
+const Footer = ({isDark}) => {
     return (
-        <footer className="footer">
+        <footer className="footer" id={isDark ? "footer-dark" : ""}>
             <button>
                 <span>
                     <span >
@@ -42,7 +42,7 @@ const Footer = () => {
                 </span >
                 &nbsp; United States &nbsp; | &nbsp; English(US) &nbsp; | &nbsp; $(USD)
             </button >
-            <section className="footer-right">
+            <section className="footer-right" id={isDark ? "footer-white" : ""}>
                 <div>
                     Created by <a href="https://handolekim.com" target="_blank"><u>Han Dole Kim</u></a>
                 </div>

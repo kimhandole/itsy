@@ -35,7 +35,13 @@ class NavCat extends React.Component {
         const categoryItems = [];
 
         for (const [index, value] of category.entries()) {
-            categoryItems.push(<Link to={`/categories/${categoryIds[index]}`}><li className="nav-cat-list-item" key={index}>{value}</li></Link>)
+            categoryItems.push(
+                <Link key={index} to={`/categories/${categoryIds[index]}`}>
+                    <li className="nav-cat-list-item" key={index}>
+                        {value}
+                    </li>
+                </Link>
+            )
         }
 
         return (

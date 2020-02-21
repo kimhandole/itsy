@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../footer/footer';
 import LoadingIcon from '../loading/loading_icon';
 
 class CategoryShow extends React.Component {
@@ -49,10 +50,11 @@ class CategoryShow extends React.Component {
         //         </ul>
         //     </section>
         // )
+        
 
         return (
             <section id="category-show">
-                
+                <Footer isDark={true} />
             </section>
         )
     }
