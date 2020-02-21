@@ -408,12 +408,15 @@
 .product-index-item > *:first-child {
     width: 163px;
     height: 130px;
-    background-color: orange;
     border-radius: 2px;
 }
 
 .product-index-item-title {
     font-size: 14px;
+    width: 120px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .product-index-item-price {

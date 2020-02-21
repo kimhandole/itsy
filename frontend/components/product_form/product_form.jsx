@@ -114,10 +114,9 @@ class ProductForm extends React.Component {
         formData.append('product[quantity]', this.state.quantity);
         formData.append('product[category_id]', this.state.category);
         formData.append('product[shop_id]', this.props.shopId);
-        if (this.props.photoFile) {
-            formData.append('product[photo]', this.state.photoFile);
-        }
+        formData.append('product[photo]', this.state.photoFile);
 
+        
         this.props.createProduct(formData);
         this.props.history.push(`/shops/${this.props.shopId}`);
     }
@@ -367,6 +366,7 @@ class ProductForm extends React.Component {
                         </section>
                     </div>
                 </section>
+
             </section>
         );
     }

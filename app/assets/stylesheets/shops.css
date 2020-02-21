@@ -70,6 +70,10 @@
     background-color: #f0fbfd;
 }
 
+#shop-add-top:hover {
+    background-color: white;
+}
+
 .shop-add {
     font-family: "SSStandard";
     font-style: normal;

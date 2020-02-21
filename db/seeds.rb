@@ -19,12 +19,12 @@ s2 = Shop.create!(
     owner_id: u1.id
 )
 
-s1 = Shop.create!(
+s3 = Shop.create!(
     title: 'Beer Shop',
     owner_id: u1.id
 )
 
-s2 = Shop.create!(
+s4 = Shop.create!(
     title: 'Weed Shop',
     owner_id: u1.id
 )
