@@ -27,10 +27,10 @@ class HomePage extends React.Component {
                         <div className="semi-footer-top-mid">
                             <h2>
                                 What is Itsy?
-                        </h2>
-                        <a href="https://github.com/kimhandole/itsy" target="_blank">
-                            Read our wonderfully weird readme
-                        </a>
+                            </h2>
+                            <a href="https://github.com/kimhandole/itsy" target="_blank">
+                                Read our wonderfully weird readme
+                            </a>
                         </div>
                         <div className="semi-footer-top-right">
 
@@ -40,26 +40,26 @@ class HomePage extends React.Component {
                         <div className="semi-footer-mid-first">
                             <h3>
                                 A one-of-a-kind
-                        </h3>
+                            </h3>
                             <p>
                                 Itsy is a global online marketplace, where people come together to make, sell, buy, and collect unique items.
-                        </p>
+                            </p>
                         </div>
                         <div className="semi-footer-mid-second">
                             <h3>
                                 Support independent creators
-                        </h3>
+                            </h3>
                             <p>
                                 There’s no Itsy warehouse – just millions of people selling the things they love. We make the whole process easy, helping you connect directly with makers to find something extraordinary.
-                        </p>
+                            </p>
                         </div>
                         <div className="semi-footer-mid-third">
                             <h3>
                                 Peace of mind
-                        </h3>
+                            </h3>
                             <p>
                                 Your privacy is the highest priority of our dedicated team. And if you ever need assistance, we are always ready to step in for support.
-                        </p>
+                            </p>
                         </div>
                     </div>
                     <div className="semi-footer-bot">
@@ -67,8 +67,8 @@ class HomePage extends React.Component {
 
                         </div>
                         <div className="semi-footer-bot-mid">
-                            <h4>
-                                Have a question? Well, we’ve got some answers.
+                        <h4>
+                            Have a question? Well, we’ve got some answers.
                         </h4>
                         <a href="mailto:kimhandole@gmail.com" target="_blank">
                             Email to Creator
