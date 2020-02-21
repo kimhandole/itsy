@@ -17,7 +17,7 @@ class ProductIndexItem extends React.Component {
 
     render() {
         if (!this.props.product) {
-            <LoadingIcon />
+            return <LoadingIcon />
         }
 
         return (
