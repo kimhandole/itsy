@@ -9,6 +9,7 @@ class ProductIndexItem extends React.Component {
     }
 
     price() {
+        // console.log(this.props.product.price, "@@@");
         if (this.props.product.price.slice(-2)[0] === ".") {
             return `${this.props.product.price}0`
         } else {
@@ -22,7 +23,7 @@ class ProductIndexItem extends React.Component {
         }
 
         return (
-            <Link to={`/products/${this.props.product.id}`}>
+            // <Link to={`/products/${this.props.product.id}`}>
                 <section className="product-index-item">
                     <img src={this.props.product.photoUrl} alt={this.props.product.title}>
 
@@ -30,7 +31,7 @@ class ProductIndexItem extends React.Component {
                     <p className="product-index-item-title">{this.props.product.title}</p>
                     <p className="product-index-item-price">${this.price()}</p>
                 </section>
-            </Link>
+            // </Link>
         );
     }
 }
