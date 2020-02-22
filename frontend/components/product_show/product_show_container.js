@@ -1,24 +1,16 @@
 import { connect } from 'react-redux';
 import ProductShow from './product_show';
+import { fetchProduct } from '../../actions/product_actions';
 
 
-const mapStateToProps = (state, ownProps) => {
-    // const product = state.entities.products[ownProps.match.params.productId];
-    // const shop = state.entities.shops[ownProps.match.params.shopId];
-    // const currentUserId = state.session.id;
-    // return {
-    //     product,
-    //     shop,
-    //     currentUserId
-    // }
-}
+
+const mapStateToProps = (state, ownProps) => ({
+    productId: ownProps.match.params.productId
+});
 
 
 const mapDispatchToProps = dispatch => ({
-    // fetchProduct: (id) => dispatch(fetchProduct(id)),
-    // fetchShop: id => dispatch(fetchShop(id)),
-    // addToCart: cartItem => dispatch(addToCart(cartItem)),
-    // fetchCartItems: () => dispatch(fetchCartItems())
+    fetchProduct: (product_id) => dispatch(fetchProduct(product_id))
 });
 
-export default connect(null, null)(ProductShow);
+export default connect(mapStateToProps, mapDispatchToProps)(ProductShow);

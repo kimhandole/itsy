@@ -1,9 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import LoadingIcon from '../loading/loading_icon';
 
 class ProductIndexItem extends React.Component {
     constructor(props) {
         super(props);
+
     }
 
     price() {
@@ -20,13 +22,15 @@ class ProductIndexItem extends React.Component {
         }
 
         return (
-            <section className="product-index-item">
-                <img src={this.props.product.photoUrl} alt={this.props.product.title}>
+            <Link to={`/products/${this.props.product.id}`}>
+                <section className="product-index-item">
+                    <img src={this.props.product.photoUrl} alt={this.props.product.title}>
 
-                </img>
-                <p className="product-index-item-title">{this.props.product.title}</p>
-                <p className="product-index-item-price">${this.price()}</p>
-            </section>
+                    </img>
+                    <p className="product-index-item-title">{this.props.product.title}</p>
+                    <p className="product-index-item-price">${this.price()}</p>
+                </section>
+            </Link>
         );
     }
 }

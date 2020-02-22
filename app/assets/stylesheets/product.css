@@ -395,7 +395,7 @@
 }
 
 .product-index {
-    margin-left: 36px;
+    margin: 0px 36px 36px 36px;
     display: flex;
     flex-wrap: wrap;
     font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
