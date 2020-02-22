@@ -3,7 +3,7 @@ Rails.application.routes.draw do
     resources :users, only: [:create]
     resource :session, only: [:create, :destroy, :show]
 
-    resources :categories, only: [:show, :index]
+    # resources :categories, only: [:show, :index]
 
     resources :shops, only: [:create, :show, :edit, :destroy, :update] do
       resources :products, only: [:create, :index]
@@ -13,6 +13,7 @@ Rails.application.routes.draw do
 
     resources :products, only: [:show, :update, :destroy]
     get "products", to: "products#all"
+    
     get "category/:category_id", to: "products#category"
   end
 

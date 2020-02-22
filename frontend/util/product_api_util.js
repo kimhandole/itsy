@@ -23,6 +23,13 @@ export const fetchProduct = (product_id) => (
     })
 );
 
+export const fetchProductsByCategory = (category_id) => (
+    $.ajax({
+        method: 'GET',
+        url: `api/category/${category_id}`
+    })
+);
+
 export const createProduct = (productForm) => {
     const shop_id = productForm.get('product[shop_id]');
     return $.ajax({

@@ -1,19 +1,37 @@
 import React from 'react';
 import Footer from '../footer/footer';
 import LoadingIcon from '../loading/loading_icon';
+import ProductIndexContainer from '../product/product_index_container'
+
 
 class CategoryShow extends React.Component {
     constructor(props) {
         super(props);
-        // this.state = {
-        //     category: null
-        // }
     }
 
     componentDidMount() {
-    //     this.props.fetchCategory(this.props.match.params.categoryId);
-    //     this.props.fetchShops();
-    //     this.props.fetchProducts();
+        this.fetchProducts(this.props.categoryId);
+    }
+
+    componentDidUpdate() {
+        this.fetchProducts(this.props.categoryId);
+    }
+
+    fetchProducts(categoryId) {
+        switch (categoryId) {
+            case "15":
+                this.props.fetchProductsByCategory(this.props.categoryId);
+                break;
+
+            case "16":
+                this.props.fetchProductsByCategory(this.props.categoryId);
+                break 
+
+            default:
+                this.props.fetchProductsByCategory(this.props.categoryId);
+                this.props.fetchProductsByCategory(`${parseInt(this.props.categoryId) + 1}`);
+                break;
+        }
     }
 
     getCategory(categoryId) {
@@ -51,51 +69,7 @@ class CategoryShow extends React.Component {
     }
 
 
-    // componentDidUpdate(prevProps) {
-    //     if (this.props.match.params.categoryId !== prevProps.match.params.categoryId){
-    //         this.props.fetchCategory(this.props.match.params.categoryId);
-    //         this.props.fetchShops();
-    //         this.props.fetchProducts();
-    //     }
-    // }
-
-    // toProductPage(product) {
-    //     event.preventDefault();
-    //     return (event) => {
-    //         event.preventDefault();
-    //         this.props.history.push(`/shops/${product.shopId}/products/${product.id}`)
-    //     }
-    // }
-
     render() {
-        // let {category, shops, products} = this.props;
-
-        // if (!category || Object.keys(shops).length === 0 || !products){
-        //     return <LoadingIcon/>
-        // }
-
-        // const categoryItems = products.map(product => {
-        //     return (
-        //         <li key={product.id} >
-        //             <img src={product.imageUrls[0]} />
-        //             <p>{product.title.slice(0, 35)}...</p>
-        //             <p className="category-shop-name">{shops[product.shopId].name}</p>
-        //             <p>USD {product.price}</p>
-        //         </li>
-        //     )
-        // });
-
-        // return (
-        //     <section id="category-show">
-        //         <ul>
-        //             {categoryItems}
-        //         </ul>
-        //     </section>
-        // )
-        
-        // if (this.state.category === null) {
-        //     <LoadingIcon />
-        // }
 
         return (
             <section id="category-show">
@@ -111,6 +85,7 @@ class CategoryShow extends React.Component {
                     </a>
                 </p>
                 <h1 className="category-title">{this.getCategory(this.props.categoryId)}</h1>
+                <ProductIndexContainer fetchAll={false} />
                 <Footer isDark={true} />
             </section>
         )

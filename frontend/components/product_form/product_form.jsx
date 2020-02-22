@@ -104,6 +104,7 @@ class ProductForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
+        debugger
         const formData = new FormData();
         formData.append('product[title]', this.state.title);
         formData.append('product[product_type]', this.state.productType);

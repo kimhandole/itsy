@@ -7,7 +7,8 @@ class Product < ApplicationRecord
         foreign_key: :shop_id,
         class_name: :Shop
 
-    belongs_to :category
+    belongs_to :category,
+        optional: true
 
     has_one_attached :photo
 

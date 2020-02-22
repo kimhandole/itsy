@@ -16,7 +16,6 @@ class HomePage extends React.Component {
         footer.classList.add(".footer-dark");
 
         this.props.fetchAllProducts();
-        this.props.fetchCategories();
     }
 
     componentDidUpdate() {
