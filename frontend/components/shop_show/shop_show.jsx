@@ -19,7 +19,6 @@ class ShopShow extends React.Component {
                 shop: shop
             })
         );
-        
     }
 
     handleAddProduct() {
@@ -41,7 +40,7 @@ class ShopShow extends React.Component {
                 </div>
                 <div className="shop-show-title-buttons">
                     <div className="shop-show-title">
-                        {this.state.shop.title}
+                        {this.props.shop.title}
                     </div>
                     <div className="shop-show-buttons">
                         <button className="shop-show-add-product" onClick={this.handleAddProduct}>Add product</button>

@@ -176,11 +176,11 @@
 .right-banner-picture {
     overflow: hidden;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
 }
 
 .right-banner-picture img {
-    width: auto;
+    width: 100%;
     min-height: 220px;
     max-height: 220px;
     object-fit: cover;
