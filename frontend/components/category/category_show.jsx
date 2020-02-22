@@ -70,7 +70,6 @@ class CategoryShow extends React.Component {
 
 
     render() {
-
         return (
             <section id="category-show">
                 <p className="category-show-header">
