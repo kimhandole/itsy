@@ -1,6 +1,7 @@
 # README
 ## Itsy
 [Itsy](http://itsy-app.herokuapp.com/), an Etsy clone, is a marketplace website focused on handmade or vintage items and craft supplies.
+![Sample](./screenshoot/sample.png)
 
 ## Built with
 * [React.js](https://reactjs.org/)
