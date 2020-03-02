@@ -22,7 +22,7 @@ class ProductShow extends React.Component {
         // });
 
         this.props.fetchProduct(this.props.productId).then(product => {
-            this.setState({ product: product });
+            // this.setState({ product: product });
             this.props.fetchShop(product.product.product.shop_id)
         });
 
