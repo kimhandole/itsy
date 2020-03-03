@@ -10,17 +10,20 @@ class CategoryShow extends React.Component {
     }
 
     componentDidMount() {
-        // this.fetchProducts(this.props.categoryId);
-        console.log(Object.values(this.props.state.entities.products), "@@");
-        Object.values(this.props.state.entities.products).map( product => {
-            if (product.categoryId === this.props.categoryId) {
-                
-            }
-        });
+        // const categoryId = parseInt(this.props.categoryId);
+
+        // Object.values(this.props.state.entities.products).map(product => {
+        //     if (product.category_id === categoryId) {
+        //         console.log("!!!");
+        //     }
+        // });
+        this.fetchProducts(this.props.categoryId);
     }
 
-    componentDidUpdate() {
-        // this.fetchProducts(this.props.categoryId);
+    componentDidUpdate(prevProps) {
+        if (prevProps.categoryId !== this.props.categoryId) {
+            this.fetchProducts(this.props.categoryId)
+        }
     }
 
     fetchProducts(categoryId) {
