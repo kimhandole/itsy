@@ -4,7 +4,8 @@ import { fetchProductsByCategory } from '../../actions/product_actions';
 
 
 const mapStateToProps = (state, ownProps) => ({
-    categoryId: ownProps.match.params.categoryId
+    categoryId: ownProps.match.params.categoryId,
+    state
 });
 
 const mapDispatchToProps = dispatch => ({
