@@ -7,6 +7,9 @@ import ProductIndexContainer from '../product/product_index_container'
 class CategoryShow extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            loading: true
+        }
     }
 
     componentDidMount() {
@@ -79,6 +82,8 @@ class CategoryShow extends React.Component {
 
 
     render() {
+        if (this.state.loading) return <LoadingIcon />
+
         return (
             <section id="category-show">
                 <p className="category-show-header">
