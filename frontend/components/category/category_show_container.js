@@ -1,6 +1,7 @@
 import { connect } from "react-redux";
 import CategoryShow from "./category_show";
 import { fetchProductsByCategory } from '../../actions/product_actions';
+import { selectCategoryProducts } from "../../reducers/selectors";
 
 
 const mapStateToProps = (state, ownProps) => ({

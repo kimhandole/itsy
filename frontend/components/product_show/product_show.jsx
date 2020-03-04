@@ -25,15 +25,14 @@ class ProductShow extends React.Component {
             // this.setState({ product: product });
             this.props.fetchShop(product.product.product.shop_id)
         });
-
     }
 
     render() {
-        if ( !this.props.product || !this.props.shop ) {
-            return (
-                <LoadingIcon />
-            );
-        }
+        // if (!this.props.shop ) {
+        //     return (
+        //         <LoadingIcon />
+        //     );
+        // }
         return (
             <section className="product-show">
                 <img src={this.props.product.photoUrl} alt={this.props.product.title}>
