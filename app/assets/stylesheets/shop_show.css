@@ -43,9 +43,10 @@
     width: 64px;
     margin-bottom: 8px;
     border-radius: 50%;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
+/* 
 #shop-show-owner-img:hover ~ #shop-show-owner-firstname {
     color: #595959 !important;
     text-decoration: underline;
@@ -54,13 +55,14 @@
 #shop-show-owner-firstname:hover {
     color: #595959 !important;
     text-decoration: underline;
-}
+} 
+*/
 
 .shop-show-owner-icon-firstname span {
     font-size: 14px;
     font-weight: 400 !important;
     color: #222 !important;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 .shop-show-owner-info span {

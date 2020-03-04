@@ -1,0 +1,20 @@
+.product-show {
+    display: flex;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.product-show-left {
+    width: 64%;
+    padding-left: 36px;
+    padding-right: 36px;
+}
+
+.product-show-left > img {
+    border-radius: 6px;
+}
+
+.product-show-right {
+    width: 36%;
+    padding-right: 36px;
+}

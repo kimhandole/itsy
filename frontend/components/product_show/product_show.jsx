@@ -35,10 +35,16 @@ class ProductShow extends React.Component {
         // }
         return (
             <section className="product-show">
-                <img src={this.props.product.photoUrl} alt={this.props.product.title}>
+                <div className="product-show-left">
+                    <img src={this.props.product.photoUrl} alt={this.props.product.title}>
 
-                </img>
-                <p className="product-index-item-title">{this.props.product.title}</p>
+                    </img>
+                </div>
+                <div className="product-show-right">
+                    <p className="product-show-item-title">{this.props.product.title}</p>
+                    <p>{this.props.product.price}</p>
+                    <p>{this.props.product.description}</p>
+                </div>
             </section>
         );
     }

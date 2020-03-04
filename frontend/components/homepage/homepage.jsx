@@ -5,6 +5,7 @@ import ProductIndexContainer from '../product/product_index_container';
 import Footer from '../footer/footer';
 
 
+
 class HomePage extends React.Component {
     constructor(props) {
         super(props);
@@ -229,6 +230,7 @@ class HomePage extends React.Component {
     }
 
     homepageAllProducts() {
+        
         return (
             <div id="all-products">
                 <h2>
