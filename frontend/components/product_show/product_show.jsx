@@ -41,8 +41,9 @@ class ProductShow extends React.Component {
                     </img>
                 </div>
                 <div className="product-show-right">
-                    <p className="product-show-item-title">{this.props.product.title}</p>
-                    <p>{this.props.product.price}</p>
+                    <h1 className="product-show-item-title">{this.props.product.title}</h1>
+                    <p className="product-show-item-price">{this.props.product.price}</p>
+                    <p className="product-show-item-description">Description</p>
                     <p>{this.props.product.description}</p>
                 </div>
             </section>
