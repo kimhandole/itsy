@@ -38,7 +38,7 @@ const App = () => (
             <ProtectedRoute exact path='/shops/:shopId' component={ShopShowContainer} />
 
             <ProtectedRoute exact path="/shops/:shopId/products/new" component={ProductFormContainer} />
-            <ProtectedRoute exact path="/products/:productId" component={ProductShowContainer} />
+            <Route exact path="/products/:productId" component={ProductShowContainer} />
 
             <Route exact path='/categories/:categoryId' component={CategoryShowContainer} />
 
