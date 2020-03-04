@@ -410,7 +410,7 @@
     width: 163px;
     height: 130px;
     border-radius: 2px;
-    object-fit: contain;
+    object-fit: cover;
 }
 
 .product-index-item-title {

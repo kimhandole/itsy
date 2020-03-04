@@ -8,10 +8,15 @@
     width: 64%;
     padding-left: 36px;
     padding-right: 36px;
+    display: flex;
+    justify-content: center;
 }
 
 .product-show-left > img {
     border-radius: 6px;
+    width: auto;
+    max-height: 400px;
+    object-fit: contain;
 }
 
 .product-show-right {
