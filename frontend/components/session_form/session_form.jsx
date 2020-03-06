@@ -9,7 +9,7 @@ class SessionForm extends React.Component {
       first_name: '',
       password: ''
     };
-    
+
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleDemoSubmit = this.handleDemoSubmit.bind(this);
   }
@@ -57,10 +57,10 @@ class SessionForm extends React.Component {
   handleEmailField() {
     if (this.props.formType === "Register") {
       return (
-        <label>Email address <span className="require-star">*</span></label>); 
-      }
-    else { 
-      return (<label>Email address</label>); 
+        <label>Email address <span className="require-star">*</span></label>);
+    }
+    else {
+      return (<label>Email address</label>);
     }
   }
 
@@ -130,7 +130,7 @@ class SessionForm extends React.Component {
       }
     }, intervalSpeed);
   }
-  
+
   demoPassword(password, intervalSpeed) {
     let j = 0;
     setInterval(() => {
@@ -144,9 +144,9 @@ class SessionForm extends React.Component {
   }
 
   handleDemoSubmit() {
-    const user = { 
+    const user = {
       email: "demo@itsy.com",
-      password: "123123" 
+      password: "123123"
     };
     this.demo(user);
   }
