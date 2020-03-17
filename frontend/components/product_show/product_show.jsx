@@ -27,6 +27,14 @@ class ProductShow extends React.Component {
         // });
     }
 
+    price() {
+        if (this.props.product.price.slice(-2)[0] === ".") {
+            return `${this.props.product.price}0`
+        } else {
+            return this.props.product.price
+        }
+    }
+
     render() {
         // if (!this.props.shop ) {
         //     return (
@@ -42,7 +50,7 @@ class ProductShow extends React.Component {
                 </div>
                 <div className="product-show-right">
                     <h1 className="product-show-item-title">{this.props.product.title}</h1>
-                    <p className="product-show-item-price">{this.props.product.price}</p>
+                    <p className="product-show-item-price">${this.price()}</p>
                     <p className="product-show-item-description">Description</p>
                     <p>{this.props.product.description}</p>
                 </div>
