@@ -22,6 +22,7 @@
  *= require product.css
  *= require product_show.css
  *= require category.css
+ *= require search.css
  *= require_tree .
  *= require_self
  */

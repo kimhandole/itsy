@@ -8,6 +8,7 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import Modal from './modal/modal';
 import GreetingContainer from './greeting/greeting_container';
 import NavCat from "./nav_cat/nav_cat";
+import SearchBarContainer from './search/search_container';
 import HomePageContainer from './homepage/homepage_container';
 import ShopIndexContainer from './shop/shop_index_container';
 import ShopFormContainer from './shop_form/shop_form_container';
@@ -24,6 +25,7 @@ const App = () => (
             <Link to="/" className="header-link">
                 <h1>Itsy</h1>
             </Link>
+            <SearchBarContainer />
             <GreetingContainer />
         </header>
 
