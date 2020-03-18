@@ -13,6 +13,7 @@ Rails.application.routes.draw do
 
     resources :products, only: [:show, :update, :destroy]
     get "products", to: "products#all"
+    get '/products/search', to: 'products#search'
     
     get "category/:category_id", to: "products#category"
   end

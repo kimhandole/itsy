@@ -33,6 +33,17 @@ class Api::ProductsController < ApplicationController
         end
     end
 
+    def search 
+        search_query = params[:query].downcase 
+        @products = Product.all.select do |product|
+            title = product.title.downcase
+            seller = product.seller.name.downcase
+            (title.include?(search_query) || seller.include?(search_query))
+        end
+
+        render :index
+    end
+
     private
     def product_params
         params.require(:product).permit(:title, :shop_id, :description, :product_type, :who, :what, :when, :price, :quantity, :category_id, :photo)
