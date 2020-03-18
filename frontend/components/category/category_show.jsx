@@ -1,6 +1,5 @@
 import React from 'react';
 import Footer from '../footer/footer';
-import LoadingIcon from '../loading/loading_icon';
 import ProductIndexContainer from '../product/product_index_container'
 
 

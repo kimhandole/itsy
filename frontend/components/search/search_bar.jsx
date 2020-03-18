@@ -40,9 +40,9 @@ class SearchBar extends React.Component {
                 onChange={this.update("query")}
                 value={this.state.query}
                 placeholder='Search for items or shops' />
-                <button type="submit" className="searchbutton">
-                    <FontAwesomeIcon icon={faSearch} size="2x" />
-                </button>
+            <button type="submit" className="searchbutton">
+                <FontAwesomeIcon icon={faSearch} size="2x" />
+            </button>
         </form>
     )
   }
