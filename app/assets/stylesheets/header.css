@@ -16,8 +16,9 @@ header {
 
 header h1 {
     color:#f1641E !important;
-    font-size: 41px;
+    font-size: 38px;
     font-family: 'Gelasio', serif;
+    padding: 12px 6px 12px 0px;
 }
 
 .login-signup {

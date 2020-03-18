@@ -2,10 +2,9 @@
 .searchbar {
     display: flex;
     width: 100%;
-    margin: 0px 18px 0px 6px;
+    margin: 0px 18px 0px 0px;
     height: 48px;
     font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
-    border: 1px black;
 }
 
 .searchbar input {
