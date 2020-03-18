@@ -10,10 +10,9 @@ Rails.application.routes.draw do
     end
 
     get "owner/:owner_id/shops", to: "shops#index"
-
+    get "/products/search", to: "products#search"
     resources :products, only: [:show, :update, :destroy]
     get "products", to: "products#all"
-    get '/products/search', to: 'products#search'
     
     get "category/:category_id", to: "products#category"
   end

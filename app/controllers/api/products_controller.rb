@@ -37,8 +37,8 @@ class Api::ProductsController < ApplicationController
         search_query = params[:query].downcase 
         @products = Product.all.select do |product|
             title = product.title.downcase
-            seller = product.seller.name.downcase
-            (title.include?(search_query) || seller.include?(search_query))
+            shop = product.shop.title.downcase
+            (title.include?(search_query) || shop.include?(search_query))
         end
 
         render :index

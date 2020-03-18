@@ -27,7 +27,7 @@ class SearchBar extends React.Component {
       e.preventDefault();
       e.stopPropagation();
       this.props.fetchSearchProducts(this.state.query).then(() => {
-        this.props.history.push("/search")
+        this.props.history.push("/products/search");
       })
   }
 
