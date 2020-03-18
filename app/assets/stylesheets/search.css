@@ -11,7 +11,9 @@
     width: 93%;
     height: 100%;
     border-radius: 100px 0px 0px 100px;
-    background-color: #e7e4e4;
+    /* background-color: #e7e4e4; */
+    background-color: rgba(34, 34, 34, 0.07);
+
     font-size: 16px;
     padding-left: 15px;
     border: 0px;
@@ -23,7 +25,9 @@
 }
 
 .searchbar button:hover {
-    background: #aaabac;
+    /* background: #aaabac; */
+    background-color: rgba(34, 34, 34, 0.15);
+
 }
 
 .searchbutton {
@@ -31,7 +35,9 @@
     height: 100%;
     padding: 0px;
     border-radius: 0px 100px 100px 0px;
-    background: #e7e4e4;
+    /* background: #e7e4e4; */
+    background-color: rgba(34, 34, 34, 0.07);
+
     color: black;
     font-size: 24px;
     cursor: pointer;
@@ -44,4 +50,17 @@
 .searchbutton svg {
     width: 18px;
     height: 18px;
+}
+
+.product-search {
+    margin: 0px 36px 36px 36px;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+}
+
+#no-result {
+    margin-left: 36px;
+    font-size: 16px;
+    font-weight: 500;
 }

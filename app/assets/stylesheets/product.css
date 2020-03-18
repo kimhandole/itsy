@@ -438,16 +438,3 @@
     justify-content: center;
     align-items: center;
 }
-
-.product-search {
-    margin: 0px 36px 36px 36px;
-    display: flex;
-    flex-wrap: wrap;
-    font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
-}
-
-#no-result {
-    margin-left: 36px;
-    font-size: 16px;
-    font-weight: 500;
-}
