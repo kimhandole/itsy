@@ -37,6 +37,10 @@ header h1 {
     background-color: #efefef;
 }
 
+.login-signup button {
+    min-width: 40px;
+}
+
 .header-group {
     display: flex;
     justify-content: center;
