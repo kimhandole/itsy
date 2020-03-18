@@ -120,7 +120,7 @@ class ProductForm extends React.Component {
 
         
         this.props.createProduct(formData);
-        this.props.history.push(`/`);
+        this.props.history.push(`/shops/${this.props.shopId}`);
     }
     
     handleAddPhoto(e) {
