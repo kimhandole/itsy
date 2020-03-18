@@ -16,11 +16,11 @@ class HomePage extends React.Component {
         const footer = elements[0];
         footer.classList.add(".footer-dark");
 
-        this.props.fetchAllProducts();
+        // this.props.fetchAllProducts();
     }
 
     componentDidUpdate() {
-        this.props.fetchAllProducts();
+        // this.props.fetchAllProducts();
     }
 
     semiFooter() {
