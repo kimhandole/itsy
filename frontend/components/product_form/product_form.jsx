@@ -3,7 +3,6 @@ import { withRouter } from 'react-router-dom';
 import { faGithub, faAngellist, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faCamera } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Link } from 'react-router-dom';
 
 
 class ProductForm extends React.Component {
@@ -121,7 +120,7 @@ class ProductForm extends React.Component {
 
         
         this.props.createProduct(formData);
-        // this.props.history.push(`/shops/${this.props.shopId}`);
+        this.props.history.push(`/shops`);
     }
     
     handleAddPhoto(e) {
@@ -419,9 +418,7 @@ class ProductForm extends React.Component {
                         <p><b>This listing isn't active yet. </b>It will be available to shoppers once you open your shop.</p>
                     </div>
                     <div className="save-and-continue-btn">
-                        <Link to={`/shops/${this.props.shopId}`}>
-                            <input type="submit" value="Save and continue" />
-                        </Link>
+                        <input type="submit" value="Save and continue" />
                     </div>
                 </div>
             </form>
