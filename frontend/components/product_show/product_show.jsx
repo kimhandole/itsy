@@ -25,13 +25,19 @@ class ProductShow extends React.Component {
         //     // this.setState({ product: product });
         //     this.props.fetchShop(product.product.product.shop_id)
         // });
+
+        if (this.props.product === undefined) {
+            this.props.fetchProduct(this.props.productId)
+        }
     }
 
     price() {
-        if (this.props.product.price.slice(-2)[0] === ".") {
-            return `${this.props.product.price}0`
-        } else {
-            return this.props.product.price
+        if (this.props.product !== undefined) {
+            if (this.props.product.price.slice(-2)[0] === ".") {
+                return `${this.props.product.price}0`
+            } else {
+                return this.props.product.price
+            }
         }
     }
 
