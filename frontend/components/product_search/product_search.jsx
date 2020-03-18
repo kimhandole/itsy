@@ -10,6 +10,15 @@ class ProductSearch extends React.Component {
     }
 
     componentDidMount() {
+
+    }
+
+    noResults() {
+        if (Object.keys(this.props.entities.products).length === 0) {
+            return (
+                <p id="no-result">No results found</p>
+            );
+        }
     }
 
     render() {
@@ -26,6 +35,7 @@ class ProductSearch extends React.Component {
                         Search Results
                     </span>
                 </p>
+                {this.noResults()}
                 <div className="product-search">
                     {
                         Object.values(this.props.entities.products).map((product, idx) => (
