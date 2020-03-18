@@ -1,6 +1,8 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import LoadingIcon from '../loading/loading_icon';
+import Footer from '../footer/footer';
+
 
 class ProductShow extends React.Component {
     constructor(props) {
@@ -39,6 +41,7 @@ class ProductShow extends React.Component {
                     <p className="product-show-item-description">Description</p>
                     <p>{this.props.product.description}</p>
                 </div>
+                <Footer isDark={true} />
             </section>
         );
     }
