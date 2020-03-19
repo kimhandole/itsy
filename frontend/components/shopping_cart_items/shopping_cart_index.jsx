@@ -39,7 +39,7 @@ class ShoppingCartIndex extends React.Component{
                         Discover something unique to fill it up
                     </Link>
                 </section>
-                <section>
+                <section className="empty-cart-text">
                     <svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" width="16px" height="16px" viewBox="0 0 65 65" version="1.1" aria-hidden="true" focusable="false">
                         <defs>
                             <polygon id="path-1" points="0 0 65 0 65 69 0 69"></polygon>

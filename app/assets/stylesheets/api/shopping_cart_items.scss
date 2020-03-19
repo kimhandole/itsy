@@ -1,3 +1,54 @@
 // Place all the styles related to the API::ShoppingCartItems controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.empty-cart-container {
+    background-color: #faf9f5;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.empty-cart-box {
+    background-color: #ffffff;
+    height: 82px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 18px;
+    margin-bottom: 36px;
+    min-width: 80%;
+
+    border-radius: 3px;
+    background-color: #FFF;
+    border: 1px solid #E1E3DF;
+    border-bottom-color: #CBCCC9;
+
+    p {
+        font-weight: 600;
+        font-family: "Guardian-EgypTT",serif;
+        font-size: 20px;
+        padding: 12px 0px;
+    }
+}
+
+.discover-link {
+    text-decoration: underline;
+    padding-bottom: 12px;
+    font-size: 13px;
+    font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+    letter-spacing: normal;
+}
+
+.empty-cart-text {
+    display: flex;
+
+    span {
+        padding-left: 6px;
+    }
+}
