@@ -12,6 +12,10 @@ class Product < ApplicationRecord
 
     has_one_attached :photo
 
+    has_many :shopping_cart_items,
+        foreign_key: :product_id,
+        class_name: :ShoppingCartItem 
+
     # def ensure_photo
     #     unless self.photo.attached?
     #         errors[:photo] << "A photo must be attached"

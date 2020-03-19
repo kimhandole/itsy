@@ -15,6 +15,8 @@ Rails.application.routes.draw do
     get "products", to: "products#all"
     
     get "category/:category_id", to: "products#category"
+    resources :shopping_cart_items, only: [:index, :create, :update, :destroy]
+
   end
 
   root "static_pages#root"  
