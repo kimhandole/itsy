@@ -7,6 +7,7 @@ import {
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import Modal from './modal/modal';
 import GreetingContainer from './greeting/greeting_container';
+import ShoppingCartIndexContainer from './shopping_cart_items/shopping_cart_item_container';
 import NavCat from "./nav_cat/nav_cat";
 import SearchBarContainer from './search/search_container';
 import HomePageContainer from './homepage/homepage_container';
@@ -42,10 +43,9 @@ const App = () => (
 
             <Route exact path='/products/search' component={ProductSearchContainer} />
             <ProtectedRoute exact path="/shops/:shopId/products/new" component={ProductFormContainer} />
+            <ProtectedRoute exact path='/cart' component={ShoppingCartIndexContainer} />
             <Route exact path="/products/:productId" component={ProductShowContainer} />
-
             <Route exact path='/categories/:categoryId' component={CategoryShowContainer} />
-
         </Switch>
         <Footer />
     </div>
