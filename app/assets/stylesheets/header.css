@@ -73,7 +73,7 @@ header h1 {
 }
 
 #header-shop-icon:hover {
-    fill: #000000;
+    fill: #343434;
 }
 
 #header-shop-text {
@@ -184,7 +184,7 @@ header h1 {
     align-items: center;
     top: 4px;
     position: relative;
-    padding: 0px 9px;
+    padding: 0px 10px;
 
 }
 
@@ -192,6 +192,10 @@ header h1 {
     cursor: pointer;
     height: 27px;
     fill: #666666;
+}
+
+.cart-icon:hover {
+    fill: #343434;
 }
 
 #header-cart-text {
