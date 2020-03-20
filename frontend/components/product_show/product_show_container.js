@@ -7,7 +7,8 @@ import { fetchShop } from '../../actions/shop_actions';
 
 const mapStateToProps = (state, ownProps) => ({
     productId: ownProps.match.params.productId,
-    product: state.entities.products[ownProps.match.params.productId]
+    product: state.entities.products[ownProps.match.params.productId],
+    userId: state.session.currentUser
 });
 
 
