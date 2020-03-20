@@ -34,6 +34,16 @@
         cursor: pointer;
         margin-bottom: 12px;
     }
+
+    input:hover {
+        border-color: rgba(34, 34, 34, 0.5);
+        box-shadow: 0 1px 12px 0 rgba(34, 34, 34, 0.2);
+    }
+
+    input:focus {
+        border-color: rgba(34, 34, 34, 0.5);
+        box-shadow: 0 1px 12px 0 rgba(34, 34, 34, 0.2);
+    }
 }
 
 input[type=number]::-webkit-inner-spin-button, 
@@ -50,6 +60,7 @@ input[type=number]::-webkit-outer-spin-button {
     margin-bottom: 12px;
 
     input {
+        transition: border-color 200ms ease-out,box-shadow 200ms ease-out,transform 200ms ease-out;
         border-width: 2px;
         border-color: #222222;
         border-style: solid;
@@ -60,6 +71,10 @@ input[type=number]::-webkit-outer-spin-button {
         padding: 12px 18px;
         cursor: pointer;
     }
+
+    input:hover {
+        transform: scale(1.02);
+    }
 }
 
 .add-to-cart {
@@ -69,6 +84,7 @@ input[type=number]::-webkit-outer-spin-button {
     margin-bottom: 12px;
 
     input {
+        transition: border-color 200ms ease-out,box-shadow 200ms ease-out,transform 200ms ease-out, background-color 200ms ease-out;
         color: white;
         background-color: #222222;
         border-width: 2px;
@@ -80,5 +96,46 @@ input[type=number]::-webkit-outer-spin-button {
         font-weight: 600;
         padding: 12px 18px;
         cursor: pointer;
+    }
+
+    input:hover {
+        background-color: #343434;
+        transform: scale(1.02);
+    }
+}
+
+.handmade {
+    display: flex;
+    align-items: center;
+    margin-bottom: 18px;
+
+    svg {
+        margin-right: 12px;
+    }
+
+    span {
+        font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+        font-weight: 300;
+        font-size: 13px;
+        line-height: 18px;
+        color: #595959;
+    }
+}
+
+.shipping {
+    margin-bottom: 36px;
+    display: flex;
+    align-items: center;
+
+    svg {
+        fill: #212121;
+        margin-right: 12px;
+    }
+
+    p {
+        font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+        font-weight: 300;
+        font-size: 13px;
+        line-height: 18px;
     }
 }
