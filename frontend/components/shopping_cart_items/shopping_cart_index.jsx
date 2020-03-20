@@ -156,6 +156,51 @@ class ShoppingCartIndex extends React.Component{
         }
     }
 
+    displayPaymentOptions() {
+        return (
+            <section className="cart-box">
+                <div>
+                    <p>
+                        How you'll pay
+                    </p>
+                    <span className="radio">
+                        <input type="radio" id="credit" name="pay" value="credit" defaultChecked />
+                        {this.shopPolicesIcons()}
+                    </span>
+                    <span className="radio">
+                        <input type="radio" id="paypal" name="pay" value="paypal" />
+                        {this.paypalPolicesIcon()}
+                    </span>
+                    <section className="item-total">
+                        <span>Item(s) total</span>
+                        <span>$30</span>
+                    </section>
+                    <section className="shipping-free">
+                        <span>Shipping</span>
+                        <span id="free">FREE</span>
+                    </section>
+                    <section>
+                        <span id="to-us">(To United States)</span>
+                    </section>
+                    <section className="proceed-to-checkout">
+                        <input type="button" value="Proceed to checkout">
+
+                        </input>
+                    </section>
+                    <section className="shop-safety">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                            <path d="M12 2L4 6v6c0 8 8 10 8 10s8-2 8-10V6zm5.25 7.54l-6.67 6.67-.11.11h-.32l-.9-.12h-.16L9 16l-2.3-4-.17-.29.29-.17L8 10.88l.28-.17.17.29 1.66 2.87 5.74-5.74.24-.24.24.24.94.94.23.23z"></path>
+                        </svg>
+                        <section className="shop-safety-text">
+                            <p>Shop with confidence on Itsy</p>
+                            <span>Secure transactions. 24/7 live support. And a refund if something goes wrong.</span>
+                        </section>
+                    </section>
+                </div>
+            </section>
+        );
+    }
+
     displayCart() {
         return (
             <section className="cart-container">
@@ -165,47 +210,7 @@ class ShoppingCartIndex extends React.Component{
                         Keep shopping
                     </Link>
                 </section>
-                <section className="cart-box">
-                    <div>
-                        <p>
-                            How you'll pay
-                        </p>
-                        <span className="radio">
-                            <input type="radio" id="credit" name="pay" value="credit" defaultChecked/>
-                            {this.shopPolicesIcons()}
-                        </span>
-                        <span className="radio">
-                            <input type="radio" id="paypal" name="pay" value="paypal" />
-                            {this.paypalPolicesIcon()}
-                        </span>
-                        <section className="item-total">
-                            <span>Item(s) total</span>
-                            <span>$30</span>
-                        </section>
-                        <section className="shipping-free">
-                            <span>Shipping</span>
-                            <span id="free">FREE</span>
-                        </section>
-                        <section>
-                            <span id="to-us">(To United States)</span>
-                            <span></span>
-                        </section>
-                        <section className="proceed-to-checkout">
-                            <input type="button" value="Proceed to checkout">
-
-                            </input>
-                        </section>
-                        <section className="shop-safety">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                                <path d="M12 2L4 6v6c0 8 8 10 8 10s8-2 8-10V6zm5.25 7.54l-6.67 6.67-.11.11h-.32l-.9-.12h-.16L9 16l-2.3-4-.17-.29.29-.17L8 10.88l.28-.17.17.29 1.66 2.87 5.74-5.74.24-.24.24.24.94.94.23.23z"></path>
-                            </svg>
-                            <section className="shop-safety-text">
-                                <p>Shop with confidence on Itsy</p>
-                                <span>Secure transactions. 24/7 live support. And a refund if something goes wrong.</span>
-                            </section>
-                        </section>
-                    </div>
-                </section>
+                {this.displayPaymentOptions()}
                 <section className="empty-cart-text">
                     <svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" width="16px" height="16px" viewBox="0 0 65 65" version="1.1" aria-hidden="true" focusable="false">
                         <defs>
