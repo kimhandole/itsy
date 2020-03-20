@@ -2,7 +2,9 @@
     json.set! item.id do 
         json.extract! item, :id, :user_id, :product_id, :quantity
         json.extract! item.product, :title, :price
-        # json.images item.product.images.map{|img| url_for(img)}
-        # json.photoUrl url_for(product.photo)
+        if item.product.photo.attached?
+        # json.imageUrls product.photo.map { |file| url_for(file) }
+            json.photoUrl url_for(item.product.photo)
+        end    
     end 
 end 

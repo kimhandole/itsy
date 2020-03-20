@@ -210,7 +210,19 @@ class ShoppingCartIndex extends React.Component{
                         Keep shopping
                     </Link>
                 </section>
-                {this.displayPaymentOptions()}
+                <section>
+                    <ul>
+                        {this.props.items.map((item) => (
+                            <ShoppingCartIndexItem
+                                key={item.id}
+                                item={item}
+                                deleteCartItem={this.props.deleteCartItem}
+                                updateCartItem={this.props.updateCartItem}
+                            />
+                        ))}
+                    </ul>
+                    {this.displayPaymentOptions()}
+                </section>
                 <section className="empty-cart-text">
                     <svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" width="16px" height="16px" viewBox="0 0 65 65" version="1.1" aria-hidden="true" focusable="false">
                         <defs>
