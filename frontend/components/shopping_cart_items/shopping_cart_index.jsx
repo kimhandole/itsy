@@ -10,10 +10,6 @@ class ShoppingCartIndex extends React.Component{
     componentDidMount() {
         this.props.fetchAllShoppingCartItems(this.props.user_id);
     }
-
-    componentWillUnmount() {
-
-    }
     
     totalQuantity(){
         return this.props.items.length; 
@@ -67,7 +63,11 @@ class ShoppingCartIndex extends React.Component{
     }
 
     displayCart() {
+        return (
+            <section className="cart">
 
+            </section>
+        );
     }
 
     render(){

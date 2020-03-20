@@ -6,7 +6,7 @@ const mapStateToProps = (state) => {
     let items = Object.keys(state.entities.shoppingCartItems).map(id=> state.entities.shoppingCartItems[id]);
     
     return {
-        user_id: state.session.id,
+        user_id: state.session.currentUser,
         items: items 
     }
 }
