@@ -62,10 +62,57 @@ class ShoppingCartIndex extends React.Component{
         );
     }
 
+    displayItemCount() {
+        if (this.totalQuantity() === 1) {
+            return (
+                <p>
+                    1 item in your cart
+                </p>
+            );
+        } else {
+            return (
+                <p>
+                    {this.totalQuantity()} items in your cart
+                </p>
+            );
+        }
+    }
+
     displayCart() {
         return (
-            <section className="cart">
-
+            <section className="cart-container">
+                <section className="cart-box">
+                    {this.displayItemCount()}
+                    <Link to="/" className="keep-shopping-link">
+                        Keep shopping
+                    </Link>
+                </section>
+                <section className="empty-cart-box">
+                    
+                </section>
+                <section className="empty-cart-text">
+                    <svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" width="16px" height="16px" viewBox="0 0 65 65" version="1.1" aria-hidden="true" focusable="false">
+                        <defs>
+                            <polygon id="path-1" points="0 0 65 0 65 69 0 69"></polygon>
+                        </defs>
+                        <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+                            <g id="IMPACT_ABOUT-PG_R4" transform="translate(-664.000000, -1098.000000)">
+                                <g id="carbon-neutral" transform="translate(121.000000, 275.000000)">
+                                    <g id="Group-3" transform="translate(543.000000, 823.000000)">
+                                        <mask id="mask-2" fill="white">
+                                            <use href="#path-1"></use>
+                                        </mask>
+                                        <g id="Clip-2"></g>
+                                        <path d="M64.2380801,0.753616945 C64.2380801,0.753616945 30.9256241,-3.9547134 16.6539847,10.16584 C7.75271703,18.9656695 6.4740571,32.3628885 12.6385439,42.5871987 L45.2062366,19.5780631 L0,64.2916697 L9.51592177,69 L21.943599,51.7908529 C32.280555,57.8881629 45.8253772,56.623437 54.7221583,47.8191699 C68.9982843,33.7030541 64.2380801,0.753616945 64.2380801,0.753616945" id="Fill-1" fill="black" mask="url(#mask-2)"></path>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </svg >
+                    <span>
+                        Itsy offsets carbon emissions from every delivery
+                    </span>
+                </section>
             </section>
         );
     }
