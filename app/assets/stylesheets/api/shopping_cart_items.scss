@@ -97,13 +97,17 @@
 .cart-box {
     background-color: #ffffff;
     display: flex;
+    justify-content: space-between;
     padding: 18px;
     margin-bottom: 24px;
-    min-width: 80%;
     border-radius: 3px;
     background-color: #FFF;
     border: 1px solid #E1E3DF;
     border-bottom-color: #CBCCC9;
+
+    ul {
+        width: 100%;
+    }
 
     div {
         display: flex;
@@ -111,6 +115,7 @@
         border-radius: 18px;
         padding: 18px;
         box-shadow: 0 4px 20px rgba(34, 34, 34, 0.15);
+        margin-left: 36px;
 
         p {
             font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
@@ -216,3 +221,73 @@
         font-weight: 600 !important;
     }
 }
+
+.cart-item-container {
+    display: flex;
+}
+
+.cart-item-image-container {
+    
+
+    img {
+        border-radius: 3px;
+        background-color: #FFF;
+        border: 1px solid #E1E3DF;
+        width: 150px;
+        height: 120px;
+        object-fit: cover;
+        margin-right: 12px;
+    }
+}
+
+.cart-item-top {
+    width: 100%;
+    display: flex;
+}
+
+.cart-item-mid {
+    font-size: 14px;
+    width: 224px;
+    margin-right: 18px;
+
+    p {
+        margin-bottom: 18px;
+    }
+
+    button {
+    }
+}
+
+.cart-item-right {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 200px;
+
+    input {
+        margin-left: 18px;
+        transition: border-color 200ms ease-out,box-shadow 200ms ease-out;
+        display: block;
+        font-family: inherit;
+        font-size: 16px;
+        height: 38px;
+        padding-left: 12px;
+        padding-right: 12px;
+        border-radius: 3px;
+        box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.05);
+        background-color: #FFF;
+        border-color: rgba(0, 0, 0, 0.15);
+        border-style: solid;
+        border-width: 1px;
+        border-bottom-color: rgba(0, 0, 0, 0.2);
+        color: #222;
+        cursor: pointer;
+    }
+
+    span {
+        padding-right: 18px;
+        font-weight: 500;
+        font-size: 14px;
+    }
+}
+
