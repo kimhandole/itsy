@@ -9,10 +9,22 @@ class ProductShow extends React.Component {
             product_id: props.product.id,
             quantity: 1
         } 
+
+        this.addToCart = this.addToCart.bind(this);
     }
 
     componentDidMount() {
-        console.log(this.props, "@@")
+    }
+
+    addToCart() {
+        const params = {
+            'user_id': this.props.userId,
+            'product_id': this.state.product_id,
+            'quantity': this.state.quantity
+        }
+        this.props.creatShoppingCartItem(params).then(() => {
+            this.props.history.push('/cart');
+        });
     }
 
     update(field) {
@@ -53,7 +65,7 @@ class ProductShow extends React.Component {
     displayAddToCart() {
         return (
             <section className="add-to-cart">
-                <input type="button" value="Add to cart">
+                <input type="button" value="Add to cart" onClick={this.addToCart}>
 
                 </input>
             </section>

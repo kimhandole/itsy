@@ -44,7 +44,7 @@ class ShoppingCartIndex extends React.Component{
                         <defs>
                             <polygon id="path-1" points="0 0 65 0 65 69 0 69"></polygon>
                         </defs>
-                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
                             <g id="IMPACT_ABOUT-PG_R4" transform="translate(-664.000000, -1098.000000)">
                                 <g id="carbon-neutral" transform="translate(121.000000, 275.000000)">
                                     <g id="Group-3" transform="translate(543.000000, 823.000000)">

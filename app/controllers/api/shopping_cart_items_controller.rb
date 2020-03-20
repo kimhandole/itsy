@@ -1,5 +1,5 @@
 class Api::ShoppingCartItemsController < ApplicationController
-    before_action :require_login
+    before_action :require_logged_in
 
 
     def index 
@@ -13,7 +13,7 @@ class Api::ShoppingCartItemsController < ApplicationController
         # quantity. 
         @shopping_cart_item = ShoppingCartItem.find_by(user_id: params[:shopping_cart_item][:user_id], product_id: params[:shopping_cart_item][:product_id])
         if @shopping_cart_item
-            @shopping_cart_item.quantity += params[:shopping_cart_item][:quantity]
+            @shopping_cart_item.quantity += params[:shopping_cart_item][:quantity].to_i
         else
             @shopping_cart_item = ShoppingCartItem.new(shopping_cart_item_params)
         end
