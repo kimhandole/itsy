@@ -62,7 +62,7 @@
     align-items: center;
 }
 
-.cart-box {
+.cart-text {
     min-width: 80%;
     display: flex;
     justify-content: space-between;
@@ -93,3 +93,53 @@
     background-color: #f9f9f7;
     border-color: rgba(0, 0, 0, 0.2);
 }
+
+.cart-box {
+    background-color: #ffffff;
+    height: 82px;
+    display: flex;
+    padding: 18px;
+    margin-bottom: 24px;
+    min-width: 80%;
+
+    border-radius: 3px;
+    background-color: #FFF;
+    border: 1px solid #E1E3DF;
+    border-bottom-color: #CBCCC9;
+
+    section {
+
+    }
+    // div {
+    //     display: flex;
+    //     flex-direction: column;
+    //     border-radius: 18px;
+    //     padding: 18px;
+    //     box-shadow: 0 4px 20px rgba(34, 34, 34, 0.15);
+
+    //     p {
+    //         font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+    //         font-weight: 500;
+    //         font-size: 16px;
+    //         line-height: 20px;
+    //         margin-bottom: 12px;
+    //     }
+
+    //     label {
+    //         margin-bottom: 12px;
+    //     }
+
+    //     span {
+    //         display: flex;
+    //         align-items: center;
+    //     }
+
+    //     input {
+    //         margin-right: 6px;
+    //     }
+    // }
+}
+
+// .cart-shop-icons {
+//     display: flex;
+// }
