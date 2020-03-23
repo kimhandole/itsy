@@ -48,7 +48,14 @@ class ShoppingCartIndexItem extends React.Component{
                     </section>
                 </section>
                 <section className="cart-item-down">
-
+                    {/* <section className="gift-item" >
+                        <input type="radio"/>
+                        <section>
+                            <span>This order is a gift</span>
+                            <p>Prices will not be shown on packing slip</p>
+                            <input type="textarea" placeholder="Enter your message—make sure to include to/from names" />
+                        </section>
+                    </section> */}
                 </section>
             </li>
         );

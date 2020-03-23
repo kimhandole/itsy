@@ -116,6 +116,7 @@
         padding: 18px;
         box-shadow: 0 4px 20px rgba(34, 34, 34, 0.15);
         margin-left: 36px;
+        max-height: 302px;
 
         p {
             font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
@@ -299,3 +300,35 @@
 .cart-item:not(:first-child) {
     margin-top: 18px;
 }
+
+
+// .cart-item-down {
+//     display: flex;
+// }
+
+// .gift-item {
+//     display: flex;
+//     justify-content: flex-start;
+//     margin-top: 36px;
+
+//     input {
+//         margin-right: 6px;
+//     }
+
+//     span {
+//         font-size: 14px;
+//         margin-bottom: 2px;
+//     }
+
+//     p {
+//         font-size: 11px;
+//         color: #595959;
+//         margin-bottom: 12px;
+//     }
+
+//     textarea,
+//     input[type] {
+//         height: 60px;
+//         padding: 9px 12px;
+//     }
+// }
