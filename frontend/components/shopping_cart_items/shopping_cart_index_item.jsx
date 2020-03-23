@@ -32,14 +32,16 @@ class ShoppingCartIndexItem extends React.Component{
             <li className='cart-item'>
                 <section className="cart-item-top">
                     <section className="cart-item-left">
-                        {/* <Link to={`/products/${item.product_id}`}> */}
+                        <Link to={`/products/${item.product_id}`}>
                             <section className="cart-item-image-container">
                                 <img src={item.photoUrl} />
                             </section>
-                        {/* </Link> */}
+                        </Link>
                     </section>
                     <section className="cart-item-mid">
-                        <p>{item.title}</p>
+                        <Link to={`/products/${item.product_id}`}>
+                            <p>{item.title}</p>
+                        </Link>
                         <button onClick={() => this.props.deleteShoppingCartItem(this.props.item.id)}>Remove</button>
                     </section>
                     <section className="cart-item-right">

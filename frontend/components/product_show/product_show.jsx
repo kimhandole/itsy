@@ -6,7 +6,7 @@ class ProductShow extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            product_id: props.product.id,
+            product_id: props.match.params.productId,
             quantity: 1
         } 
 
@@ -14,6 +14,7 @@ class ProductShow extends React.Component {
     }
 
     componentDidMount() {
+        this.props.fetchProduct(this.props.match.params.productId)
     }
 
     addToCart() {
