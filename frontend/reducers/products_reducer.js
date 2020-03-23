@@ -12,7 +12,7 @@ const productsReducer = (state = {}, action) => {
     switch (action.type) {
         case RECEIVE_PRODUCT:
             return Object.assign({}, state, {
-                [action.product.id]: action.product
+                [action.product.id]: action.product.product
             });
 
         case RECEIVE_PRODUCTS:
