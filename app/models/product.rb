@@ -10,7 +10,7 @@ class Product < ApplicationRecord
     belongs_to :category,
         optional: true
 
-    has_one_attached :photo
+    has_many_attached :photo
 
     has_many :shopping_cart_items,
         foreign_key: :product_id,

@@ -1,6 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import LoadingIcon from '../loading/loading_icon';
+import Gallery from './gallery'
 
 class ProductShow extends React.Component {
     constructor(props) {
@@ -136,9 +137,10 @@ class ProductShow extends React.Component {
         return (
             <section className="product-show">
                 <div className="product-show-left">
-                    <img src={this.props.product.photoUrl} alt={this.props.product.title}>
+                    {/* <img src={this.props.product.photoUrl} alt={this.props.product.title}>
 
-                    </img>
+                    </img> */}
+                    <Gallery images={this.props.product.photoUrls} />
                 </div>
                 <div className="product-show-right">
                     <h1 className="product-show-item-title">{this.props.product.title}</h1>

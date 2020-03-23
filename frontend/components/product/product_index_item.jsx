@@ -20,11 +20,11 @@ class ProductIndexItem extends React.Component {
         if (!this.props.product) {
             return <LoadingIcon />
         }
-
+        
         return (
             <Link to={`/products/${this.props.product.id}`}>
                 <section className="product-index-item">
-                    <img src={this.props.product.photoUrl} alt={this.props.product.title}>
+                    <img src={this.props.product.photoUrls[0]} alt={this.props.product.title}>
 
                     </img>
                     <p className="product-index-item-title">{this.props.product.title}</p>
