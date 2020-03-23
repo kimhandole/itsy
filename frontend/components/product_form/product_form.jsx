@@ -19,7 +19,7 @@ class ProductForm extends React.Component {
             quantity: "1",
             category: "",
             photoFile: null,
-            photoUrl: null
+            photoUrls: []
         }
 
         this.updateType = this.updateType.bind(this);
@@ -118,6 +118,12 @@ class ProductForm extends React.Component {
         formData.append('product[shop_id]', this.props.shopId);
         formData.append('product[photo]', this.state.photoFile);
 
+        if (this.state.fileUploaded) {
+            for (let i = 0; i < this.state.images.length; i++) {
+                formData.append('product[photo][]', this.state.images[i]);
+            }
+        }
+
         
         this.props.createProduct(formData);
         this.props.history.push(`/shops/${this.props.shopId}`);
@@ -130,17 +136,34 @@ class ProductForm extends React.Component {
     }
 
     handleFile(e) {
-        const file = e.currentTarget.files[0];
-        const fileReader = new FileReader();
-        fileReader.onloadend = () => {
-            this.setState({
-                photoFile: file,
-                photoUrl: fileReader.result
-            });
-        }
-        if (file) {
+        this.setState({
+            images: e.currentTarget.files,
+            fileUploaded: true
+        });
+
+
+        const files = Array.from(e.currentTarget.files);
+        files.forEach(file => {
+            const fileReader = new FileReader();
+            fileReader.onload = (e) => {
+                let imgUrl = e.target.result;
+                this.setState({
+                    photoUrls: [...this.state.photoUrls, imgUrl]
+                });
+            }
             fileReader.readAsDataURL(file);
-        }
+        })
+
+        // fileReader.onloadend = () => {
+        //     this.setState({
+        //         photoFile: file,
+        //         photoUrl: fileReader.result
+        //     });
+        // }
+        
+        // if (file) {
+        //     fileReader.readAsDataURL(file);
+        // }
     }
 
     handleCancel(e) {
@@ -149,11 +172,14 @@ class ProductForm extends React.Component {
     }
 
     renderPreview() {
-        if (this.state.photoUrl) {
+        console.log(this.state.photoUrls)
+        if (this.state.photoUrls.length >= 1) {
             return (
-                <div className="product-form-photos-descriptions-image preview-image" >
-                    <img src={this.state.photoUrl} alt="preview" className="preview" />
-                </div>
+                this.state.photoUrls.map((photo, idx) => (
+                    <div className="product-form-photos-descriptions-image preview-image" key={idx} >
+                        <img src={photo} alt="preview" className="preview" />
+                    </div>
+                ))
             );
         } 
     }
@@ -183,7 +209,7 @@ class ProductForm extends React.Component {
                                     <FontAwesomeIcon icon={faCamera} size="2x" />
                                     <p>Add a photo</p>
                                 </div>
-                                <input id="add-photo-input" type="file" onChange={this.handleFile}>
+                                <input id="add-photo-input" type="file" onChange={this.handleFile} multiple accept='image/x-png, image/jpeg, image/jpg'>
 
                                 </input>
                             </div>
