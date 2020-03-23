@@ -40,7 +40,7 @@ class ShoppingCartIndexItem extends React.Component{
                     <section className="cart-item-left">
                         <Link to={`/products/${item.product_id}`}>
                             <section className="cart-item-image-container">
-                                <img src={item.photoUrl} />
+                                <img src={item.photoUrls[0]} />
                             </section>
                         </Link>
                     </section>
