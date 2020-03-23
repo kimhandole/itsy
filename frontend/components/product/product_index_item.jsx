@@ -20,6 +20,7 @@ class ProductIndexItem extends React.Component {
         if (!this.props.product) {
             return <LoadingIcon />
         }
+        console.log(this.props.product);
         
         return (
             <Link to={`/products/${this.props.product.id}`}>
