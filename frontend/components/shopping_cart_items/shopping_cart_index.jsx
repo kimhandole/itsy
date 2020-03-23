@@ -182,7 +182,7 @@ class ShoppingCartIndex extends React.Component{
                     <span id="to-us">(To United States)</span>
                 </section>
                 <section className="proceed-to-checkout">
-                    <input type="button" value="Proceed to checkout">
+                    <input type="button" value="Proceed to checkout" onClick={() => this.props.openThankYou()}>
 
                     </input>
                 </section>

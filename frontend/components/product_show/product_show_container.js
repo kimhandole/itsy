@@ -3,7 +3,7 @@ import ProductShow from './product_show';
 import { fetchProduct } from '../../actions/product_actions';
 import { fetchShop } from '../../actions/shop_actions';
 import { creatShoppingCartItem } from '../../actions/shopping_cart_action';
-
+import { openModal } from '../../actions/modal_actions';
 
 
 const mapStateToProps = (state, ownProps) => ({
@@ -16,7 +16,8 @@ const mapStateToProps = (state, ownProps) => ({
 const mapDispatchToProps = dispatch => ({
     fetchProduct: (product_id) => dispatch(fetchProduct(product_id)),
     fetchShop: (shop_id) => dispatch(fetchShop(shop_id)),
-    creatShoppingCartItem: (item) => dispatch(creatShoppingCartItem(item))
+    creatShoppingCartItem: (item) => dispatch(creatShoppingCartItem(item)),
+    openThankYou: () => dispatch(openModal('thankyou'))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProductShow);

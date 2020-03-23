@@ -56,7 +56,7 @@ class ProductShow extends React.Component {
     displayBuyItNow() {
         return (
             <section className="buy-it-now">
-                <input type="button" value="Buy it now">
+                <input type="button" value="Buy it now" onClick={() => this.props.openThankYou()}>
                     
                 </input>
             </section>
