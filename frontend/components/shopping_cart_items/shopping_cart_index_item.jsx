@@ -7,7 +7,6 @@ class ShoppingCartIndexItem extends React.Component{
         this.state = {
             id: this.props.item.id,
             quantity: this.props.item.quantity,
-            // price: this.props.item.price || 0
         }
     }
 

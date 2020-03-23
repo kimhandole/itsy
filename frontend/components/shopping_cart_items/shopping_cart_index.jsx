@@ -172,7 +172,7 @@ class ShoppingCartIndex extends React.Component{
                 </span>
                 <section className="item-total">
                     <span>Item(s) total</span>
-                    <span>$30</span>
+                    <span>${this.totalAmount()}</span>
                 </section>
                 <section className="shipping-free">
                     <span>Shipping</span>
