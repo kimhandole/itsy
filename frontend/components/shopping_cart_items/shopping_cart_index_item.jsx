@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import LoadingIcon from '../loading/loading_icon';
+
 
 class ShoppingCartIndexItem extends React.Component{
     constructor(props){
@@ -26,6 +28,10 @@ class ShoppingCartIndexItem extends React.Component{
     }
 
     render() {
+        if (!this.props.item) {
+            return <LoadingIcon />
+        }
+        
         let item = this.props.item;
 
         return(
