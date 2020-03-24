@@ -1,6 +1,6 @@
 .footer {
     background-color: #ffffff;
-    padding: 18px 0px 18px 2px;
+    padding: 18px 18px 18px 2px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -45,12 +45,17 @@
     font-size: 14px;
 }
 
-.footer-right > * {
+.footer-right div {
     margin-right: 18px;
 }
 
+/* 
 .footer-right a:last-child {
     margin-right: 16px;
+} */
+
+.footer-right a:not(:last-child) {
+    margin-right: 18px;
 }
 
 #footer-white {
