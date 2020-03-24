@@ -9,13 +9,6 @@ class CategoryShow extends React.Component {
     }
 
     componentDidMount() {
-        // const categoryId = parseInt(this.props.categoryId);
-
-        // Object.values(this.props.state.entities.products).map(product => {
-        //     if (product.category_id === categoryId) {
-        //         console.log("!!!");
-        //     }
-        // });
         this.fetchProducts(this.props.categoryId);
     }
 
