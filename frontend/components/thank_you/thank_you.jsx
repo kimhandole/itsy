@@ -20,6 +20,8 @@ class ThankYou extends React.Component {
             <section className="thank-you">
                 <p>Thank you for coming to Itsy!</p>
                 <button onClick={this.handleClick} >Return to Home Page</button>
+                <span>or</span>
+                <p>Please check out creator's website, github, linkedin, angelist below 👇🏼</p>
                 <section className="footer-right">
                     <div>
                         Created by <a href="https://handolekim.com" target="_blank"><u>Han Dole Kim</u></a>
