@@ -18,7 +18,7 @@ class ProductForm extends React.Component {
             price: "",
             quantity: "1",
             category: "",
-            photoFile: null,
+            photoFiles: [],
             photoUrls: []
         }
 
@@ -116,14 +116,15 @@ class ProductForm extends React.Component {
         formData.append('product[quantity]', this.state.quantity);
         formData.append('product[category_id]', this.state.category);
         formData.append('product[shop_id]', this.props.shopId);
-        formData.append('product[photo]', this.state.photoFile);
+        // formData.append('product[photo]', this.state.photoFile);
 
         if (this.state.fileUploaded) {
-            for (let i = 0; i < this.state.images.length; i++) {
-                formData.append('product[photo][]', this.state.images[i]);
+            for (let i = 0; i < this.state.photoFiles.length; i++) {
+                formData.append('product[photo][]', this.state.photoFiles[i]);
             }
         }
 
+        console.log(formData)
         
         this.props.createProduct(formData);
         this.props.history.push(`/shops/${this.props.shopId}`);
@@ -136,34 +137,25 @@ class ProductForm extends React.Component {
     }
 
     handleFile(e) {
-        this.setState({
-            images: e.currentTarget.files,
-            fileUploaded: true
-        });
+        // this.setState({
+        //     // photoFiles: e.currentTarget.files,
+        //     fileUploaded: true
+        // });
 
 
         const files = Array.from(e.currentTarget.files);
-        files.forEach(file => {
+        files.forEach( (file, idx) => {
             const fileReader = new FileReader();
             fileReader.onload = (e) => {
                 let imgUrl = e.target.result;
                 this.setState({
-                    photoUrls: [...this.state.photoUrls, imgUrl]
+                    photoFiles: [...this.state.photoFiles, files[idx]],
+                    photoUrls: [...this.state.photoUrls, imgUrl],
+                    fileUploaded: true
                 });
             }
             fileReader.readAsDataURL(file);
         })
-
-        // fileReader.onloadend = () => {
-        //     this.setState({
-        //         photoFile: file,
-        //         photoUrl: fileReader.result
-        //     });
-        // }
-        
-        // if (file) {
-        //     fileReader.readAsDataURL(file);
-        // }
     }
 
     handleCancel(e) {
@@ -172,7 +164,6 @@ class ProductForm extends React.Component {
     }
 
     renderPreview() {
-        console.log(this.state.photoUrls)
         if (this.state.photoUrls.length >= 1) {
             return (
                 this.state.photoUrls.map((photo, idx) => (

@@ -16,17 +16,26 @@ class ProductIndexItem extends React.Component {
         }
     }
 
+    renderImage() {
+        if (this.props.product.photoUrls) {
+            return (
+                <img src={this.props.product.photoUrls[0]} alt={this.props.product.title}>
+
+                </img>
+            );
+        }
+    }
+
     render() {
         if (!this.props.product) {
             return <LoadingIcon />
         }
+
         
         return (
             <Link to={`/products/${this.props.product.id}`}>
                 <section className="product-index-item">
-                    <img src={this.props.product.photoUrls[0]} alt={this.props.product.title}>
-
-                    </img>
+                    {this.renderImage()}
                     <p className="product-index-item-title">{this.props.product.title}</p>
                     <p className="product-index-item-price">${this.price()}</p>
                 </section>
