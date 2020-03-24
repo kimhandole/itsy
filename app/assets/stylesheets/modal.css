@@ -143,10 +143,11 @@
 #demo-button {
     padding: 12px;
     align-self: flex-end;
-    margin-right: 6px;
-    margin-bottom: 6px;
+    margin-right: 18px;
+    margin-bottom: 18px;
     transition: all 0.4s ease 0s;
     border-radius: 25px;
+    font-weight: 800;
 }
 
 #demo-button:hover {
