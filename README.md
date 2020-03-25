@@ -1,7 +1,7 @@
 # README
 ## Itsy
 [Itsy](https://etsycloneitsy.com), an Etsy clone, is a marketplace website focused on handmade or vintage items and craft supplies.
-![Sample](./screenshot/sample.png)
+![Sample](./screenshot/sample1.png)
 
 ## Built with
 * [React.js](https://reactjs.org/)
