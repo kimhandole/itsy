@@ -61,13 +61,9 @@ Dark and white version footers
 const Footer = ({isDark}) => {
     return (
         <footer className="footer" id={isDark ? "footer-dark" : ""}>
-            
             ...
-             
             <section className="footer-right" id={isDark ? "footer-white" : ""}>
-                
                 ...
-
             </section>
         </footer>
 ```
