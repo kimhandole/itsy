@@ -55,6 +55,24 @@ Signed in user can add products to their own shopping cart. Cart items can be ad
 
 
 ## Technical details
+### Two different colored footer
+#### dark and white version footers
+```
+const Footer = ({isDark}) => {
+    return (
+        <footer className="footer" id={isDark ? "footer-dark" : ""}>
+            
+            ...
+             
+            <section className="footer-right" id={isDark ? "footer-white" : ""}>
+                
+                ...
+
+            </section>
+        </footer>
+```
+
+### Shop fetching
 ```
 class ShopIndex extends Component {
     constructor(props) {
