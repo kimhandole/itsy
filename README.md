@@ -56,7 +56,7 @@ Signed in user can add products to their own shopping cart. Cart items can be ad
 
 ## Technical details
 ### Two different colored footer
-#### dark and white version footers
+Dark and white version footers
 ```
 const Footer = ({isDark}) => {
     return (
