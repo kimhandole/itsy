@@ -31,8 +31,10 @@ npm run webpack
 ### User Auth 
 User can sign up or sign in to make create, edit, delete or see shops that belongs to the user. 
 
-### Shop Manager
+### Shop
 User can create, edit, delete shops that can hold listings of products.
+![Sample5](./screenshot/sample5.png)
+
 
 ### Product
 User can add listings to shops. Shops can have mulitple product listings.
