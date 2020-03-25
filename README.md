@@ -1,7 +1,7 @@
 # README
 ## Itsy
 [Itsy](https://etsycloneitsy.com), an Etsy clone, is a marketplace website focused on handmade or vintage items and craft supplies.
-![Sample](./screenshot/sample1.png)
+![Sample1](./screenshot/sample1.png)
 
 ## Built with
 * [React.js](https://reactjs.org/)
@@ -28,7 +28,29 @@ npm run webpack
 ```
 
 ## Key features
+### User Auth 
 User can sign up or sign in to make create, edit, delete or see shops that belongs to the user. 
+
+### Shop Manager
+User can create, edit, delete shops that can hold listings of products.
+
+### Product
+User can add listings to shops. Shops can have mulitple product listings.
+![Sample3](./screenshot/sample3.png)
+
+
+### Category
+Product listings are visible by category selection. 
+
+### Search
+User can search by product listing title or shop name.
+![Sample2](./screenshot/sample2.png)
+
+
+### Shopping Cart 
+Signed in user can add products to their own shopping cart. Cart items can be added, edited, or deleted.
+![Sample4](./screenshot/sample4.png)
+
 
 ## Technical details
 ```
