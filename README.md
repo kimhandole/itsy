@@ -31,14 +31,18 @@ npm run webpack
 ### User Auth 
 User can sign up or sign in to make create, edit, delete or see shops that belongs to the user. 
 
-### Shop
-User can create, edit, delete shops that can hold listings of products.
+### Shop (CRUD)
+Signed in user can create, edit, delete shops that can hold listings of products.
 ![Sample5](./screenshot/sample5.png)
 
 
-### Product
-User can add listings to shops. Shops can have mulitple product listings.
+### Product 
+Shop owner can add listings with multiple images to shops. Shops can have mulitple product listings.
 ![Sample3](./screenshot/sample3.png)
+
+### Product Show
+User can see multiple images of the product and read details.
+![Sample6](./screenshot/sample6.png)
 
 
 ### Category
@@ -84,6 +88,16 @@ class ShopIndex extends Component {
     render() {
       ...
     }
+```
+
+### Loading
+```
+render() {
+    if (!this.props.item) {
+        return <LoadingIcon />
+    }
+    ...
+}
 ```
 #### Prevent fetching old data and update after new data has already updated on front-end 
 * after create, edit or delete a shop, front-end fetched a updated shop to front-end, `fetchShop(shopId)`
