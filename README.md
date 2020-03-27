@@ -59,6 +59,30 @@ Signed in user can add products to their own shopping cart. Cart items can be ad
 
 
 ## Technical details
+### Close dropdown on click
+When user click on user section of icons on top right corner of the app, it adds event listener that closes dropdown on click to any area of the app.
+```
+handleDropDown() {
+    const list = document.getElementsByClassName("dropdown-list");
+    const dropdown = list[0];
+
+    if (dropdown.classList.length === 1) {
+        dropdown.classList.add("active");
+        document.addEventListener('click', function (event) {
+            // Don't follow the link
+            event.preventDefault();
+
+            const list = document.getElementsByClassName("dropdown-list");
+
+            if (list[0].classList[1]) {
+                list[0].classList.remove("active")
+            }
+
+        }, { once: true });
+    }
+}
+```
+
 ### Two different colored footer
 Dark and white version footers
 ```
