@@ -49,7 +49,7 @@ const Footer = ({isDark}) => {
                 <a href="https://github.com/kimhandole/itsy" target="_blank">
                     <FontAwesomeIcon icon={faGithub} size="2x" />
                 </a>
-                <a href="https://www.linkedin.com/in/han-dole-kim-76979996" target="_blank">
+                <a href="https://www.linkedin.com/in/handolekim2020" target="_blank">
                     <FontAwesomeIcon icon={faLinkedin} size="2x" />
                 </a>
                 <a href="https://angel.co/kimhandole" target="_blank">
